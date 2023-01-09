@@ -1,0 +1,266 @@
+@keyframes text 
+    0%
+        transform: translate(0, 0)
+    100%
+        transform: translate(932px, 0)
+@keyframes sliderOne 
+    0%
+        transform: translate(0, 0)
+    100%
+        transform: translate(5614px, 0)
+@keyframes sliderTwo 
+    0%
+        transform: translate(0, 0)
+    100%
+        transform: translate(-4957px, 0)
+header
+    position: fixed
+    top: 0px
+    height: 119px
+    width: 100%
+    padding: 0 50px
+    background-color: #fff
+    align-items: center
+    z-index: 5
+    .header_catalog
+        font-weight: 400
+        line-height: 44px
+        font-size: 35px
+        color: #000000
+        display: block
+        margin-top: 38px
+        text-decoration: none
+    .header_logo
+        img
+            display: flex
+            margin: 0 auto
+    .header_rightBlock
+        display: flex
+        justify-content: space-between
+        justify-items: center
+        list-style-type: none
+        a
+            margin: 41px 50px 0 0
+        img
+            display: flex
+            justify-items: center
+.firstScreen
+    background: url(../img/bg/bg_1.png) center center/cover no-repeat
+    min-height: 1080px
+    padding: 337px 0 184px 0
+    position: relative
+    &_header
+        font-family: 'Alumni Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 400px
+        text-align: center
+        color: #FFFFFF
+    &_subheader
+        font-family: 'PT Sans Narrow'
+        font-style: normal
+        font-weight: 400
+        font-size: 50px
+        line-height: 65px
+        color: #FFFFFF
+        margin-top: 90px
+        text-align: center
+    &_button
+        width: 326px
+        height: 80px
+        padding: 27px 0px
+        background: #ffffff
+        font-family: 'Arsenal'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        color: #000000
+        border: none
+        display: block
+        align-items: center
+        margin: 70px auto
+        z-index: 0
+.menu 
+    &_dropDown
+        display: none
+        position: fixed
+        top: 119px
+        padding: 0 0 50px 70px
+        left: 0px
+        z-index: 10
+        width: 510px
+        height: 916px
+        background-color: #fff
+        &_active
+            display: block
+            position: fixed
+            top: 119px
+            padding: 0 0 50px 70px
+            left: 0px
+            z-index: 10
+            width: 510px
+            height: 916px
+            background-color: #fff
+        &_cross
+            display: block
+            position: absolute
+            right: 50px
+            top: 50px        
+            width: 26px
+            height: 12px
+            span
+                display: block
+                height: 2px
+                width: 100%
+                margin-bottom: -2px
+                background-color: #000000
+                transition: 0.3s all
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-45deg)
+                &:nth-child(2)
+                    transform: translateY(3px) rotate(45deg)
+        &_search
+            display: block
+            position: absolute
+            top: 160px
+            left: 70px
+        p
+            position: relative
+            .srch
+                width: 365px
+                height: 53px
+                font-family: 'PT Sans Narrow'
+                font-style: normal
+                font-weight: 400
+                font-size: 18px
+            .icon
+                position: absolute
+                right: 12px
+                display: inline
+                top: 10px
+        ul
+            list-style-type: none
+            position: absolute
+            padding: 0px
+            margin-top: 273px
+            li
+                margin-bottom: 32px 
+                a
+                    font-family: 'PT Sans Narrow'
+                    font-weight: 400
+                    font-size: 30px
+                    line-height: 17px
+                    text-decoration: none
+                    color: #000000          
+.blockTwo
+    height: 994px
+    position: relative
+    overflow: hidden
+    z-index: 0
+    &_left
+        position: absolute
+        width: 30%
+        height: 994px
+        margin: 170px 60% 0 10%
+        top: 0px
+        z-index: 10
+    &_header
+        font-family: 'Alumni Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 150px
+        line-height: 101.02%
+        color: #FFFFFF
+        text-align: start
+    &_button
+        width: 326px
+        height: 80px
+        background: #FFFFFF
+        font-family: 'Arsenal'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        color: #000000
+        border: none
+        margin-top: 70px
+        z-index: 0
+    &_block
+        position: absolute
+        height: 90px
+        width: 300px
+        bottom: 138px
+        left: -1699px
+        p
+            text-align: center
+            color:#ffffff00
+            -webkit-text-stroke: 2px #ffffff
+            text-transform: uppercase
+            padding-top: 35px
+            animation: text 6s infinite linear
+            padding-left: 100%
+            white-space: nowrap
+            font-family: 'Arsenal'
+            font-style: normal
+            font-weight: 400
+            font-size: 120px
+            line-height: 150px
+            margin-left: 0px
+            width: 100%
+            z-index: 0
+    .carousel
+        img
+            height: 994px
+.blockThree
+    padding: 160px 50px
+    height: 1080px
+    &_wrapp
+        height: 1925px
+        position: relative
+        .picture1
+            position: absolute
+            width: 747px
+            height: 684px
+            left: 0px
+            top: 0px
+            background: url(../img/slider_third/one.png) center center/cover no-repeat
+            h3
+                font-family: 'PT Sans Narrow'
+                font-style: normal
+                font-weight: 400
+                font-size: 70px
+                color: #FFFFFF
+                display: flex
+                justify-content: center
+                margin-top: 41%
+.season
+    height: 2091px
+    padding: 160px 50px
+    background: #1C1C1C
+    h1
+        font-family: 'Alumni Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 150px
+        color: #FFFFFF
+    &_wrapp
+        overflow: hidden
+        &_firstLine
+            margin-top: 60px
+            height: 772px
+            width: 7336px
+            display: flex
+            margin-left: -5614px
+            animation: sliderOne 40s infinite linear
+            &_items
+                margin-right: 20px
+                display: inline-block
+        &_secondLine
+            margin-top: 20px
+            height: 772px
+            width: 6877px
+            display: flex
+            margin-right: -4957px
+            animation: sliderTwo 40s infinite linear
+            &_items
+                margin-right: 20px
+                display: inline-block
