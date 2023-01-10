@@ -56,6 +56,7 @@ header
         font-size: 400px
         text-align: center
         color: #FFFFFF
+        cursor: default
     &_subheader
         font-family: 'PT Sans Narrow'
         font-style: normal
@@ -80,6 +81,10 @@ header
         align-items: center
         margin: 70px auto
         z-index: 0
+        &:hover
+            content: ''
+            background: #1C1C1C
+            color: #ffffff
 .menu 
     &_dropDown
         display: none
