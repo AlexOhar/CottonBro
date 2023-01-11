@@ -45,7 +45,9 @@ header
             display: flex
             justify-items: center
 .firstScreen
-    background: url(../img/bg/bg_1.png) center center/cover no-repeat
+    // background: url(../img/bg/bg_1.png) center center/cover no-repeat
+    background: url(https://player.vimeo.com/video/660616378?title=0&portrait=0&byline=0&autoplay=1&muted=true) center center/cover no-repeat
+    src="//player.vimeo.com/video/660616378?title=0&portrait=0&byline=0&autoplay=1&muted=true"
     min-height: 1080px
     padding: 337px 0 184px 0
     position: relative
@@ -81,10 +83,12 @@ header
         align-items: center
         margin: 70px auto
         z-index: 0
+        transition: 0.5s all
         &:hover
             content: ''
             background: #1C1C1C
             color: #ffffff
+            transition: 0.5s all
 .menu 
     &_dropDown
         display: none
@@ -148,15 +152,24 @@ header
             position: absolute
             padding: 0px
             margin-top: 273px
+            width: 400px
+            height: 600px
+            overflow-x: hidden
+            overflow-y: scroll
             li
-                margin-bottom: 32px 
+                margin-bottom: 43px 
+                width: 400px
                 a
                     font-family: 'PT Sans Narrow'
                     font-weight: 400
                     font-size: 30px
-                    line-height: 17px
+                    line-height: 39px
                     text-decoration: none
-                    color: #000000          
+                    color: #000000
+                    width: 400px
+            &::-webkit-scrollbar 
+                background: transparent
+                width: 5px      
 .blockTwo
     height: 994px
     position: relative
@@ -189,6 +202,12 @@ header
         border: none
         margin-top: 70px
         z-index: 0
+        transition: 0.5s all
+        &:hover
+            content: ''
+            background: #1C1C1C
+            color: #ffffff
+            transition: 0.5 all
     &_block
         position: absolute
         height: 90px
@@ -269,3 +288,115 @@ header
             &_items
                 margin-right: 20px
                 display: inline-block
+.selection
+    height: 1323px
+    padding: 160px 50px
+    background: #ffffff
+
+.subscribe
+    height: 1095px
+    padding: 105px 50px
+    background: #1C1C1C
+    &_image
+        width: 900px
+        height: 885px
+    &_button
+        margin-top: 60px
+        width: 307px
+        height: 67px
+        background: #151515
+        border: 1px solid #FFFFFF
+        font-family: 'PT Sans Narrow'
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 23px
+        color: #FFFFFF
+        transition: 1s all
+        &:hover
+            background: #ffffff
+            color: #151515
+            border: 1px solid #151515
+            transition: 1s all
+    h3
+        font-family: 'PT Sans Narrow'
+        font-style: normal
+        font-weight: 400
+        font-size: 60px
+        line-height: 78px
+        color: #FFFFFF
+        margin-top: 222px
+    input
+        width: 594px
+        height: 32px
+        margin-top: 70px
+        font-family: 'PT Sans Narrow'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        color: #FFFFFF
+        background-color: #1C1C1C
+        border-block-start: none
+        border-right-style: none
+        border-left-style: none
+        &:focus-visible
+            outline: none
+.forYou
+    height: 1391px
+    padding: 160px 50px
+    background: #ffffff
+    h2
+        font-family: 'Alumni Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 150px
+        line-height: 180px
+        color: #000000
+    &_item
+        height: 866px
+        .photo
+            height: 773px
+        h5
+            margin: 20px 0 0 20px
+            font-family: 'PT Sans Narrow'
+            font-style: normal
+            font-weight: 400
+            font-size: 20px
+            line-height: 26px
+            color: #000000
+        h4
+            margin: 16px 0 0 20px
+            font-family: 'PT Sans Narrow'
+            font-style: normal
+            font-weight: 400
+            font-size: 24px
+            line-height: 31px
+            color: #000000
+        &:nth-child(1)
+            .photo
+                transition-duration: 0.8s
+                background: url(../img/last_animation/1-1.png) center center/cover no-repeat
+                &:hover
+                    transition-duration: 0.8s 
+                    background: url(../img/last_animation/1-2.png) center center/cover no-repeat
+        &:nth-child(2)
+            .photo
+                transition-duration: 0.8s
+                background: url(../img/last_animation/2-2.png) center center/cover no-repeat
+                &:hover
+                    transition-duration: 0.8s
+                    background: url(../img/last_animation/2-1.png) center center/cover no-repeat
+        &:nth-child(3)
+            .photo
+                transition-duration: 0.8s
+                background: url(../img/last_animation/3-1.png) center center/cover no-repeat
+                &:hover
+                    transition-duration: 0.8s
+                    background: url(../img/last_animation/3-2.png) center center/cover no-repeat
+        &:nth-child(4)
+            .photo
+                transition-duration: 0.8s
+                background: url(../img/last_animation/4-1.png) center center/cover no-repeat
+                &:hover
+                    transition-duration: 0.8s
+                    background: url(../img/last_animation/4-2.png) center center/cover no-repeat
