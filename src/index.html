@@ -16,22 +16,20 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">    <title>Document</title>
 </head>
 <body>
-  <header>
-    <div class="row">
-      <div class="col-xl-1">
-        <a href="#" class="header_catalog">Каталог</a>
-      </div>
-      <div class="col-xl-2 offset-md-4 header_logo">
-        <img src="/src/icons/logo.png" alt="logo">
-      </div>
-        <div class="col-xl-2 offset-md-3 header_rightBlock">
+  <section class="header">
+    <div class="header_left">
+      <a href="#" class="header_left_catalog">Каталог</a>
+    </div>
+    <div class="header_logo">
+      <img src="/src/icons/logo.png" alt="logo">
+    </div>
+      <div class="header_right">
           <a href="#"><img src="/src/icons/account.png" alt="account"></a>
           <a href="#"><img src="/src/icons/search.png" alt="search"></a>
           <a href="#"><img src="/src/icons/favorites.png" alt="favorites"></a>
           <a href="#"><img src="/src/icons/basket.png" alt="basket"></a>
-      </div>
-    </div>  
-  </header>
+    </div> 
+  </section>
   <div class="menu" >
     <div class="menu_dropDown">
       <div class="menu_dropDown_cross">
@@ -61,10 +59,15 @@
     </div>  
   </div>
   <section class="firstScreen">
-    
-    <h1 class="firstScreen_header">CottonBro</h1>
-    <h3 class="firstScreen_subheader">New collection</h3>
-    <button class="firstScreen_button">Узнать больше</button>
+    <div class="firstScreen_overlay">
+      <h1 class="firstScreen_header">CottonBro</h1>
+      <h3 class="firstScreen_subheader">New collection</h3>
+      <button class="firstScreen_button">Узнать больше</button>
+    </div>
+    <video loop="" muted="" autoplay="" class="firstScreen_video">
+        <source src="/src/video/pexels-cottonbro-10669563.mp4" type="video/mp4">
+        <source src="https://player.vimeo.com/video/660616378?title=0&portrait=0&byline=0&autoplay=1&muted=true" type="video/webm">
+    </video>
   </section>
   <section class="blockTwo">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">

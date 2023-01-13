@@ -13,52 +13,121 @@
         transform: translate(0, 0)
     100%
         transform: translate(-4957px, 0)
-header
+.header
     position: fixed
     top: 0px
     height: 119px
     width: 100%
     padding: 0 50px
     background-color: #fff
-    align-items: center
-    z-index: 5
-    .header_catalog
-        font-weight: 400
-        line-height: 44px
-        font-size: 35px
-        color: #000000
-        display: block
-        margin-top: 38px
-        text-decoration: none
-    .header_logo
+    display: flex
+    justify-content: space-between
+    z-index: 100
+    &_left
+        &_catalog
+            position: relative
+            font-weight: 400
+            line-height: 44px
+            font-size: 35px
+            color: #000000
+            display: block
+            width: 277px
+            margin-top: 38px
+            text-decoration: none
+            z-index: 100
+            &::after
+                position: relative
+                content: ''
+                display: block
+                margin-top: -44px
+                height: 44px
+                width: 10px
+                background: #ffffff
+                margin-left: -15px
+                z-index: 200
+                transition: 2s all
+            &:hover
+                font-weight: 400
+                line-height: 44px
+                font-size: 35px
+                color: #000000
+                text-decoration: none
+                &::after
+                    content: ''
+                    margin-left: 150px
+                    transition: 3s all
+    &_logo
         img
             display: flex
             margin: 0 auto
-    .header_rightBlock
+    &_right
+        width: 277px
         display: flex
         justify-content: space-between
         justify-items: center
         list-style-type: none
         a
-            margin: 41px 50px 0 0
+            margin: 41px 0 40px 50px
+            width: 20px
+            &::after
+                position: relative
+                content: ''
+                display: block
+                margin-top: -44px
+                height: 44px
+                width: 10px
+                background: #ffffff
+                margin-left: -15px
+                z-index: 200
+                transition: 3s all
+            &:hover
+                font-weight: 400
+                line-height: 44px
+                font-size: 35px
+                color: #000000
+                text-decoration: none
+                &::after
+                    content: ''
+                    margin-left: 150px
+                    transition: 4s all 
         img
             display: flex
             justify-items: center
+            
+            
+
 .firstScreen
+    // stabil main picture
     // background: url(../img/bg/bg_1.png) center center/cover no-repeat
-    background: url(https://player.vimeo.com/video/660616378?title=0&portrait=0&byline=0&autoplay=1&muted=true) center center/cover no-repeat
-    src="//player.vimeo.com/video/660616378?title=0&portrait=0&byline=0&autoplay=1&muted=true"
-    min-height: 1080px
-    padding: 337px 0 184px 0
+    height: 1080px
+    overflow: hidden
+    z-index: 0
     position: relative
+    &_overlay 
+        background: rgba(0,0,0,0.3)
+        position: absolute
+        top:0
+        left:0
+        height: 100%
+        width: 100%
+        padding: 337px 0 184px 0
+        z-index: 1
+    &_video 
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        z-index: -100
     &_header
         font-family: 'Alumni Sans'
         font-style: normal
         font-weight: 400
         font-size: 400px
+        line-height: 63.5%
         text-align: center
         color: #FFFFFF
         cursor: default
+        z-index: 5
     &_subheader
         font-family: 'PT Sans Narrow'
         font-style: normal
@@ -68,6 +137,7 @@ header
         color: #FFFFFF
         margin-top: 90px
         text-align: center
+        z-index: 5
     &_button
         width: 326px
         height: 80px
@@ -82,7 +152,7 @@ header
         display: block
         align-items: center
         margin: 70px auto
-        z-index: 0
+        z-index: 10
         transition: 0.5s all
         &:hover
             content: ''
