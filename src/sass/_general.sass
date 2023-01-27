@@ -3,18 +3,10 @@
         transform: translate(0, 0)
     100%
         transform: translate(932px, 0)
-@keyframes sliderOne 
-    0%
-        transform: translate(0, 0)
-    100%
-        transform: translate(5614px, 0)
-@keyframes sliderTwo 
-    0%
-        transform: translate(0, 0)
-    100%
-        transform: translate(-4957px, 0)
+
 a
     text-decoration: none
+    text-decoration-line: none
 .header
     position: fixed
     top: 0px
@@ -26,6 +18,7 @@ a
     justify-content: space-between
     z-index: 100
     &_left
+        display: flex
         &_catalog
             position: relative
             font-weight: 400
@@ -37,6 +30,10 @@ a
             margin-top: 38px
             text-decoration: none
             z-index: 100
+            background-color: #ffffff00
+            border: none
+            height: 44px
+            text-align: start
             &::after
                 position: relative
                 content: ''
@@ -51,7 +48,7 @@ a
             &:hover
                 font-weight: 400
                 line-height: 44px
-                font-size: 35px
+                // font-size: 35px
                 color: #000000
                 text-decoration: none
                 &::after
@@ -91,7 +88,7 @@ a
             &:hover
                 font-weight: 400
                 line-height: 44px
-                font-size: 35px
+                // font-size: 35px
                 color: #000000
                 text-decoration: none
                 &::after
@@ -122,11 +119,11 @@ a
         z-index: 1
     &_video 
         position: absolute
-        top: 70px
+        top: 60px
         left: 50%
         transform: translateX(-50%)
-        height: 100%
-        // width: 100vl
+        // height: 100%
+        width: 100vw
         z-index: -100
     &_header
         font-family: 'Alumni Sans'
@@ -171,32 +168,35 @@ a
             transition: 0.5s all
 .menu 
     &_dropDown
-        display: none
+        display: block
         position: fixed
-        top: 119px
+        top: -1500px
         padding: 0 0 50px 70px
         left: 0px
         z-index: 10
         width: 510px
-        height: 916px
+        height: 80vh
         background-color: #fff
+        transition: 1s all
         &_active
             display: block
             position: fixed
-            top: 119px
+            top: 0px
             padding: 0 0 50px 70px
             left: 0px
             z-index: 10
             width: 510px
-            height: 916px
+            height: 90vh
             background-color: #fff
+            transition: 1s all
         &_cross
-            display: block
-            position: absolute
+            display: none
+            position: relative
             right: 50px
-            top: 50px        
+            top: 60px        
             width: 26px
             height: 12px
+            z-index: 10000
             span
                 display: block
                 height: 2px
@@ -212,7 +212,7 @@ a
             display: block
             position: absolute
             top: 160px
-            left: 70px
+            left: 69px
         p
             position: relative
             .srch
@@ -222,23 +222,37 @@ a
                 font-style: normal
                 font-weight: 400
                 font-size: 18px
+                padding-left: 15px
+            input::-webkit-search-decoration
+                display: none
+            input::-webkit-search-cancel-button
+                display: none
+            input::-webkit-search-results-button
+                display: none
+            input::-webkit-search-results-decoration
+                display: none
+           
             .icon
                 position: absolute
                 right: 12px
                 display: inline
                 top: 10px
         ul
-            list-style-type: none
+            // list-style-type: none
             position: absolute
             padding: 0px
             margin-top: 273px
-            width: 400px
-            height: 600px
+            width: 365px
+            height: 50vh
             overflow-x: hidden
             overflow-y: scroll
+            transition: 2s all
+            &::-webkit-scrollbar-thumb 
+                background: #7070709c
+                border-radius: 8px 
             li
                 margin-bottom: 43px 
-                width: 400px
+                width: 365px
                 a
                     font-family: 'PT Sans Narrow'
                     font-weight: 400
@@ -251,7 +265,7 @@ a
                 background: transparent
                 width: 5px      
 .blockTwo
-    height: 994px
+    // height: 994px
     position: relative
     overflow: hidden
     z-index: 0
@@ -313,31 +327,34 @@ a
             z-index: 0
     .carousel
         img
-            height: 100%
+            // height: 100%
+            width: 100vw
             margin-left: 50%
             transform: translateX(-50%)
 .blockThree
-    padding: 160px 50px
+    padding: 77px 125px
     height: 1080px
     &_wrapp
-        height: 1925px
-        position: relative
-        .picture1
-            position: absolute
-            width: 747px
-            height: 684px
-            left: 0px
-            top: 0px
-            background: url(../img/slider_third/one.png) center center/cover no-repeat
-            h3
-                font-family: 'PT Sans Narrow'
-                font-style: normal
-                font-weight: 400
-                font-size: 70px
-                color: #FFFFFF
-                display: flex
-                justify-content: center
-                margin-top: 41%
+        h2
+            font-family: 'Alumni Sans'
+            font-style: normal
+            font-weight: 400
+            font-size: 150px
+            line-height: 180px
+            color: #000000
+            text-align: center
+            margin-left: 50%
+            transform: translateX(-50%)
+            z-index: 20
+        h3
+            font-family: 'PT Sans Narrow'
+            font-style: normal
+            font-weight: 400
+            font-size: 70px
+            color: #FFFFFF
+            display: flex
+            justify-content: center
+            margin-top: 41%
 .season
     height: 2091px
     padding: 160px 50px
@@ -355,34 +372,123 @@ a
             height: 772px
             width: 7336px
             display: flex
-            margin-left: -5614px
-            animation: sliderOne 40s infinite linear
+            float: right
+            // margin-right: -2676px
+            margin-right: 0px
+            animation: sliderOne 20s infinite linear
             &_items
-                margin-right: 20px
+                margin-left: 20px
                 display: inline-block
         &_secondLine
             margin-top: 20px
             height: 772px
-            width: 6877px
+            width: 12320px
             display: flex
-            margin-right: -4957px
-            animation: sliderTwo 40s infinite linear
+            margin-left: 0px
+            animation: sliderTwo 20s infinite linear
             &_items
                 margin-right: 20px
                 display: inline-block
+@keyframes sliderOne 
+    0%
+        // transform: translate(0px, 0)
+    100%
+        transform: translate(2452px, 0)
+@keyframes sliderTwo 
+    0%
+        transform: translate(0, 0)
+    100%
+        transform: translate(-2304px, 0)
+
 .selection
     height: 1323px
-    padding: 160px 50px
+    padding: 136px 50px
     background: #ffffff
-
+    &_wrapper
+        display: flex
+        flex-wrap: nowrap
+        justify-content: space-around
+        &_item
+            // width: 100%
+            height: 1003px
+            transition: 2s all
+            h3
+                writing-mode: vertical-lr
+                transform: rotate(-180deg) translateY(-109px)
+                font-family: 'PT Sans Narrow'
+                font-style: normal
+                font-weight: 400
+                font-size: 130px
+                color: #000000
+                margin: 0
+                cursor: pointer
+                 
+            &:nth-child(1)
+                &:hover
+                    background: url(../img/slider_four/jackets.png) center center/cover no-repeat
+                    width: 612px
+                    h3
+                        display: none
+            &:nth-child(2)
+                &:hover
+                    background: url(../img/slider_four/costumes.png) center center/cover no-repeat
+                    width: 612px
+                    h3
+                        display: none
+            &:nth-child(3)
+                &:hover
+                    background: url(../img/slider_four/sweaters.png) center center/cover no-repeat
+                    width: 612px
+                    h3
+                        display: none
+            &:nth-child(4)
+                &:hover
+                    background: url(../img/slider_four/coats.png) center center/cover no-repeat
+                    width: 612px
+                    h3
+                        display: none
+            &:nth-child(5)
+                &:hover
+                    background: url(../img/slider_four/warmjackets.png) center center/cover no-repeat
+                    width: 612px
+                    h3
+                        display: none
+            &:nth-child(6)
+                &:hover
+                    background: url(../img/slider_four/jeans.png) center center/cover no-repeat
+                    width: 612px
+                    h3
+                        display: none
+            &:nth-child(7)
+                &:hover
+                    background: url(../img/slider_four/dresses.png) center center/cover no-repeat
+                    width: 612px
+                    h3
+                        display: none
+            &:nth-child(8)
+                &:hover
+                    background: url(../img/slider_four/blouses.png) center center/cover no-repeat
+                    width: 612px
+                    h3
+                        display: none
+            &:nth-child(9)
+                &:hover
+                    background: url(../img/slider_four/pants.png) center center/cover no-repeat
+                    width: 612px
+                    h3
+                        display: none
+            &:nth-child(2n)
+                h3
+                    transform: rotate(-180deg) translateY(-510px)
 .subscribe
     height: 1095px
     padding: 105px 50px
     background: #1C1C1C
     &_image
-        display: none // --------------------------------
-        width: 900px
-        height: 885px
+        display: block
+        height: 900px
+        background: url(../img/subscribe.png) center center/cover no-repeat
+       
     &_button
         margin-top: 60px
         width: 307px
@@ -483,3 +589,84 @@ a
                 &:hover
                     transition-duration: 0.8s
                     background: url(../img/last_animation/4-2.png) center center/cover no-repeat
+.footer
+    padding: 0 50px 50px 50px
+    height: 478px
+    span
+        display: block
+        height: 2px
+        background-color: rgba(0, 0, 0, 0.5)
+        margin-bottom: 50px
+    &_header
+        font-family: 'Alumni Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 70px
+        line-height: 84px
+        color: #000000
+    &_subheader
+        font-family: 'PT Sans Narrow'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        line-height: 26px
+        color: #000000
+        margin-top: 29px
+    &_button
+        margin-top: 55px
+        width: 307px
+        height: 67px
+        background: #151515
+        border: 1px solid #FFFFFF
+        font-family: 'PT Sans Narrow'
+        font-style: normal
+        font-weight: 400
+        font-size: 18px
+        line-height: 23px
+        color: #FFFFFF
+        transition: 1s all
+        &:hover
+            background: #ffffff
+            color: #151515
+            border: 1px solid #151515
+            transition: 1s all
+    input
+        width: 594px
+        height: 32px
+        margin-top: 60px
+        font-family: 'PT Sans Narrow'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        color: #151515
+        background-color: #ffffff
+        border-block-start: none
+        border-right-style: none
+        border-left-style: none
+        &:focus-visible
+            outline: none
+    ul
+        margin-top: 82px
+        li
+            margin-bottom: 28px
+            list-style-type: none
+            a
+                text-decoration: none
+                font-family: 'PT Sans Narrow'
+                font-style: normal
+                font-weight: 400
+                font-size: 20px
+                line-height: 26px
+                color: #000000
+                
+                
+    &_pay
+        margin-top: 182px
+        img
+            margin-right: 55px
+    &_connect
+        margin-top: 68px
+        display: flex
+        justify-content: flex-start
+        a
+            margin-right: 30px

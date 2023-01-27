@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu_dropDown'),
     menuItem = document.querySelectorAll('.list_item'),
-    hamburger = document.querySelector('.header_catalog');
+    hamburger = document.querySelector('.header_left_catalog'),
     cross = document.querySelector('.menu_dropDown_cross');
 
     hamburger.addEventListener('click', () => {

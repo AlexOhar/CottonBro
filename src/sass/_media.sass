@@ -1,30 +1,211 @@
-@media (max-width: 1920px)
-    // .menu
-    //     &_dropDown
-    //         &_cross
-    //             top: 25px
-    //         &_search
-    //             top: 100px
-    //         .list
-    //             margin-top: 223px
+@media (max-width: 1919px)
+    .header
+        height: 60px
+        &_left
+            &_catalog
+                width: 200px
+                margin-top: 7px
+                font-size: 28px
+        &_logo
+            img
+                height: 55px
+        &_right
+            width: 200px
+            a
+                margin-top: 15px
+                margin-left: 0px
+                img
+                    transform: scale(0.7)
+    .menu
+        &_dropDown
+            &_search
+                top: 135px
+            &_active
+                .list
+                    margin-top: 225px
+                    height: 50vh
+    .firstScreen
+            &_video 
+                // height: 100vh
+                height: 100%
+                width: auto
+    .selection
+        height: 100vh
+        padding-top: 70px
+        &_wrapper
+            &_item
+                height: 800px
+                h3
+                    font-size: 90px
+                &:nth-child(2n)
+                    h3
+                        transform: rotate(-180deg) translateY(-460px)
+    .blockTwo
+        &_left
+            margin-top: 90px
+        &_button
+            margin-top: 50px
+    .season
+        height: 2050px
+        padding-top: 100px
+        h1
+            font-size: 120px
+    .subscribe
+        height: 100vh
+        padding: 80px 50px
+        &_image
+            height: 750px
+        h3
+            margin-top: 180px
+            font-size: 55px
+    .forYou
+        height: 100vh
+        padding: 80px 50px
+        &_item
+            height: 52vh
+            .photo
+                height: 100%
+        h2
+            font-size: 120px
+    .footer
+        &_pay
+            img
+                margin-right: 30px
 @media (max-width: 1440px)
-    // header
-    //     height: 90px
-    //     .header_catalog
-    //         font-size: 32px
-    //         line-height: 9px
-    //     .header_logo
-    //         img
-    //             height: 80px
-    //     .header_rightBlock
-    //         a
-    //             margin-top: 28px
-    // .firstScreen
-    //     &_header
-    //         font-size: 350px
-    // .season
-    //     h1
-    //         font-size: 140px
+    .header
+        height: 60px
+        &_left
+            &_catalog
+                width: 200px
+                margin-top: 7px
+                font-size: 28px
+        &_logo
+            img
+                height: 55px
+        &_right
+            width: 200px
+            a
+                margin-top: 15px
+                margin-left: 0px
+                img
+                    transform: scale(0.7)
+    .menu
+        &_dropDown
+            &_search
+                top: 110px
+            &_active
+                .list
+                    margin-top: 185px
+                    height: 50vh
+            ul
+                li
+                    margin-bottom: 30px
+    .firstScreen
+        // height: 800px
+        height: 100vh
+        &_header
+            font-size: 250px
+        &_overlay
+            padding-top: 130px
+        &_subheader
+            margin-top: 70px
+        &_button
+            width: 250px
+            height: 65px
+            padding: 5px 0px
+            margin-top: 50px
+        &_video
+            top: 40px
+            width: 100%
+            height: auto
+    .blockTwo
+        &_header
+            font-size: 130px
+        &_button
+            width: 250px
+            height: 65px
+            padding: 5px 0px
+            margin-top: 50px
+            // margin-top: 30px
+        &_block
+            bottom: 100px
+            p
+                font-size: 80px
+    .blockThree
+        padding: 50px 100px
+        height: 990px
+        &_wrapp
+            div
+                transform: scale(0.8)
+    .season
+        height: 1400px
+        padding: 80px 50px
+        h1
+            font-size: 100px
+        &_wrapp
+            &_firstLine
+                height: 500px
+                margin-right: -2620px
+                animation: sliderOne 20s infinite linear
+                &_items
+                    margin-left: 10px
+                    img
+                        height: 500px
+                        width: auto
+            &_secondLine
+                height: 500px
+                &_items
+                    margin-right: 10px
+                    img
+                        height: 500px
+                        width: auto
+    @keyframes sliderOne 
+        0%
+            // transform: translate(2620px, 0)
+        100%
+            transform: translate(2620px, 0)
+    .selection
+        padding: 80px 50px
+        // height: 100vh
+        &_wrapper
+            &_item
+                height: 450px
+                h3
+                    margin-top: -115px
+                    font-size: 80px
+                    line-height: 104px
+                &:nth-child(2n)
+                    h3
+                        transform: rotate(-180deg) translateY(-290px)
+    .subscribe
+        h3
+            margin-top: 0
+            font-size: 45px
+        &_image
+            height: 440px
+        input
+            width: 460px
+    .forYou
+        padding: 40px 50px
+        h2
+            font-size: 80px
+            line-height: 140px
+        &_item
+            height: 50vh
+    .footer
+        span
+            margin-top: 50px
+        input
+            width: 400px
+        ul
+            li
+                margin-bottom: 20px
+        &_pay
+            img
+                margin-right: 7px
+        &_connect
+            a
+                margin-right: 20px
 
 @media (max-width: 1200px)
 
