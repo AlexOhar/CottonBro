@@ -1,21 +1,4 @@
-@media (max-width: 1919px)
-    .header
-        height: 60px
-        &_left
-            &_catalog
-                width: 200px
-                margin-top: 7px
-                font-size: 28px
-        &_logo
-            img
-                height: 55px
-        &_right
-            width: 200px
-            a
-                margin-top: 15px
-                margin-left: 0px
-                img
-                    transform: scale(0.7)
+@media (max-width: 1800px)
     .menu
         &_dropDown
             &_search
@@ -24,11 +7,6 @@
                 .list
                     margin-top: 225px
                     height: 50vh
-    .firstScreen
-            &_video 
-                // height: 100vh
-                height: 100%
-                width: auto
     .selection
         height: 100vh
         padding-top: 70px
@@ -75,18 +53,19 @@
     .header
         height: 60px
         &_left
+            width: 200px
             &_catalog
-                width: 200px
-                margin-top: 7px
+                // width: 200px
                 font-size: 28px
+                line-height: 28px
         &_logo
             img
                 height: 55px
         &_right
             width: 200px
             a
-                margin-top: 15px
-                margin-left: 0px
+                // margin-top: 15px
+                margin: 5px
                 img
                     transform: scale(0.7)
     .menu
@@ -101,23 +80,21 @@
                 li
                     margin-bottom: 30px
     .firstScreen
-        // height: 800px
-        height: 100vh
+        margin-top: 60px
+        // height: 100vh
         &_header
-            font-size: 250px
-        &_overlay
-            padding-top: 130px
-        &_subheader
-            margin-top: 70px
+            font-size: 250px  
+        &_wrapper
+            padding-top: 70px
         &_button
             width: 250px
             height: 65px
             padding: 5px 0px
             margin-top: 50px
         &_video
-            top: 40px
-            width: 100%
-            height: auto
+            top: 0px
+            height: 140vh
+            // height: auto
     .blockTwo
         &_header
             font-size: 130px
@@ -131,12 +108,25 @@
             bottom: 100px
             p
                 font-size: 80px
+    // .blockThree
+    //     padding: 50px 0px
+    //     &_wrapp
+    //         width: 1200px
+    //         h2
+    //             font-size: 130px
+    //         .flyCard
+    //             transform: scale(0.9)
+    //             &:hover
+    //                 transform: translate(-25%, -25%) scale(1.2)
     .blockThree
-        padding: 50px 100px
-        height: 990px
+        height: 130vh
         &_wrapp
-            div
+            width: 70vw
+            height: 90%
+            .flyCard
                 transform: scale(0.8)
+                &:hover
+                    transform: translate(0%, 0%) scale(1)
     .season
         height: 1400px
         padding: 80px 50px
@@ -145,25 +135,19 @@
         &_wrapp
             &_firstLine
                 height: 500px
-                margin-right: -2620px
-                animation: sliderOne 20s infinite linear
+                margin-right: -2890px
                 &_items
-                    margin-left: 10px
+                    // margin-left: 10px
                     img
                         height: 500px
                         width: auto
             &_secondLine
                 height: 500px
                 &_items
-                    margin-right: 10px
+                    // margin-right: 10px
                     img
                         height: 500px
                         width: auto
-    @keyframes sliderOne 
-        0%
-            // transform: translate(2620px, 0)
-        100%
-            transform: translate(2620px, 0)
     .selection
         padding: 80px 50px
         // height: 100vh
@@ -206,14 +190,316 @@
         &_connect
             a
                 margin-right: 20px
+    
 
 @media (max-width: 1200px)
+    .blockThree
+        &_wrapp
+            width: 70vw
+            .flyCard
+                transform: scale(0.7)
+                &:hover
+                    transform: translate(0%, 0%) scale(1)
+    .season
+        height: 1000px
+        padding: 60px 50px
+        h1
+            font-size: 80px
+        &_wrapp
+            &_firstLine
+                height: 350px
+                margin-right: -4270px
+                &_items
+                    margin-left: 10px
+                    img
+                        height: 350px
+                        width: auto
+            &_secondLine
+                height: 350px
+                &_items
+                    margin-right: 10px
+                    img
+                        height: 350px
+                        width: auto
 
 
 @media (max-width: 991px)
+    .firstScreen
+        &_header
+            font-size: 160px
+        &_subheader
+            margin-top: 60px
+            font-size: 45px
+            line-height: 45px
+    .button
+            width: 190px
+            height: 60px
+    .blockTwo
+        &_left 
+            margin-top: 50px
+        &_header
+            font-size: 70px
+        &_block
+            bottom: 70px
+        &_button
+            margin-top: 35px
+    .blockThree
+        &_wrapp
+            h2
+                font-size: 70px
+            .flyCard
+                transform: scale(0.6)
+                &:hover
+                    transform: translate(0%, 0%) scale(0.7)
 
 
 @media (max-width: 767px)
-
+    .header
+        padding: 0 30px
+        height: 40px
+        &_left
+            width: 130px
+            &_catalog
+                font-size: 18px
+        &_logo img
+            height: 38px
+        &_right
+            width: 130px
+            a
+                padding: 0px
+                img
+                    transform: scale(.5)
+    .button
+        font-size: 15px
+        width: 140px
+        height: 45px
+    .firstScreen
+        margin-top: 40px
+        &_wrapper
+            padding-top: 40px
+        &_header
+            font-size: 120px
+        &_subheader
+            margin-top: 30px
+            font-size: 35px
+            line-height: 35px
+    .blockTwo
+        &_block p
+            font-size: 60px
+        &_header
+            font-size: 60px
+        &_left
+            margin-top: 20px
+        &_button
+            margin-top: 20px
+    .blockThree
+        height: auto
+        padding: 60px 0
+        &_wrapp
+            height: 80vh
+            h2
+                font-size: 60px
+                line-height: 70px
+            .flyCard
+                transform: scale(0.4)
+                &:hover
+                    transform: translate(0%, 0%) scale(0.5)
+    .season
+        height: auto
+        &_wrapp_firstLine
+            margin-top: 25px
 
 @media (max-width: 575px)
+    .header
+        padding: 0 10px
+        &_left
+            width: 80px
+            &_catalog
+                width: 100%
+                &::after
+                    width: 5px
+                &:hover
+                    &::after
+                        margin-left: 90px
+        &_right
+            width: 80px
+            height: 30px
+            a
+                display: none
+        &_btn
+            display: block
+            position: absolute
+            top: 10px
+            right: 20px
+            width: 20px
+            height: 20px
+        &_mobileHamburger
+            display: block
+            position: absolute
+            top: 10px
+            right: 0px
+            width: 20px
+            height: 1px
+            background-color: #000000
+            transition: .3s all ease-out
+            &::after
+                content: ''
+                position: absolute
+                margin-top: -5px
+                width: 20px
+                height: 1px
+                background-color: #000000
+                transition: .3s all ease-out
+            &::before 
+                content: ''
+                position: absolute
+                margin-top: 5px
+                width: 20px
+                height: 1px
+                background-color: #000000
+                transition: .3s all ease-out
+        .hamburger_active
+            height: 0px
+            background-color: #ffffff
+            &::after
+                content: ''
+                margin-top: 0px
+                width: 20px
+                transform: rotate(45deg)
+            &::before 
+                content: ''
+                margin-top: 0px
+                width: 20px
+                transform: rotate(-45deg)
+        .mobile_active
+            right: 0px
+        &_mobileMenu
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            position: absolute
+            top: 40px
+            right: -150px
+            width: 150px
+            height: 200px
+            // padding-top: 20px
+            padding: 20px 0 20px 20px
+            background-color: #ffffff
+            z-index: -5
+            transition: .3s all ease-out
+            a
+                display: flex
+                font-weight: 400
+                line-height: 24px
+                font-size: 16px
+                color: #000000
+                text-decoration-line: none
+    .menu_dropDown
+        &_active
+            width: 250px
+            padding: 0 0 20px 20px
+        p .srch
+            width: 210px
+            border-radius: 0px
+            border: solid 1px
+        p .icon
+            margin-top: 5px
+            width: 20px
+        &_search
+            left: 20px
+            top: 80px
+        ul
+            width: 200px
+        .list_item
+            font-size: 20px
+            padding-left: 15px
+            line-height: 18px
+    .firstScreen
+        height: 100vh
+        background: url(../img/bg/bg_1.png) 38% center/cover no-repeat
+        &_header
+            font-size: 100px
+        video
+            display: none
+    .blockTwo
+        height: 350px
+        overflow-x: hidden
+        .carusel
+            height: 240px 
+        &_header
+            margin-top: 0px
+            font-size: 55px
+        .button
+            // width: 110px
+            // height: 30px
+            margin-top: 30px
+            // font-size: 12px
+        .carousel-inner
+            height: 350px
+            img
+                height: 350px
+                width: auto
+        .slideImgTwo
+            padding-left: 70px
+        .carousel-control-next-icon
+            display: none
+        .carousel-control-prev-icon
+            display: none
+        &_block p
+            font-size: 120px
+            -webkit-text-stroke: 1px #ffffff
+            padding-top: 25px
+            animation: text 8s infinite linear
+    .blockThree
+        // height: 1740px
+        height: auto
+        &_wrapp
+            position: relative
+            display: flex
+            flex-direction: column
+            width: 90vw
+            h2
+                font-size: 60px
+                line-height: 60px
+            a
+                margin-top: 20px
+                display: inline-flex
+                text-decoration-line: none
+            h3
+                font-size: 30px
+            .picture6
+                display: none
+            .picture7
+                display: none
+
+            .flyCard
+                position: relative
+                width: 100%
+                height: 45vh
+                animation: none
+                transform: none
+                background-position-y: top
+                &:hover
+                    transform: none
+    .season
+        height: auto
+        padding: 50px 30px
+        h1
+            font-size: 60px
+            width: 100%
+            margin: 0px
+            text-align: center
+        &_wrapp
+            &_firstLine
+                height: 250px
+                margin-top: 30px
+                margin-right: -5270px
+                &_items
+                    img
+                        height: 250px
+            &_secondLine
+                height: 250px
+                margin-top: 10px
+                &_items
+                    img
+                        height: 250px

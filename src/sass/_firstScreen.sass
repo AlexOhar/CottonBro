@@ -1,0 +1,170 @@
+.firstScreen
+    // stabil main picture
+    // background: url(../img/bg/bg_1.png) center center/cover no-repeat
+    margin-top: 100px
+    height: 100vh
+
+    overflow: hidden
+    z-index: 0
+    position: relative
+    background: #ffffff
+    &_overlay 
+        background: rgba(0,0,0,0.3)
+        position: absolute
+        top: 0px
+        left: 0px
+        height: 100%
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        z-index: 1
+    &_wrapper
+        padding-top: 100px 
+    &_video 
+        position: absolute
+        top: 0px
+        left: 50%
+        transform: translateX(-50%)
+        height: 110vh
+        // width: 100vw
+        z-index: -100
+    &_header
+        font-family: 'Alumni Sans'
+        font-style: normal
+        font-weight: 400
+        font-size: 400px
+        line-height: 63.5%
+        text-align: center
+        color: #FFFFFF
+        cursor: default
+        z-index: 5
+    &_subheader
+        font-family: 'PT Sans Narrow'
+        font-style: normal
+        font-weight: 400
+        font-size: 50px
+        line-height: 65px
+        color: #FFFFFF
+        margin-top: 90px
+        text-align: center
+        z-index: 5
+    &_button
+        width: 326px
+        height: 80px
+        padding: 27px 0px
+        background: #ffffff
+        font-family: 'Arsenal'
+        font-style: normal
+        font-weight: 400
+        font-size: 20px
+        color: #000000
+        border: none
+        display: block
+        align-items: center
+        margin: 70px auto
+        z-index: 10
+        transition: 0.5s all
+        &:hover
+            content: ''
+            background: #1C1C1C
+            color: #ffffff
+            transition: 0.5s all
+.menu 
+    &_dropDown
+        display: block
+        position: fixed
+        top: -1500px
+        padding: 0 0 50px 70px
+        left: 0px
+        z-index: 10
+        width: 510px
+        height: 80vh
+        background-color: #fff
+        transition: 1s all
+        &_active
+            display: block
+            position: fixed
+            top: 0px
+            padding: 0 0 50px 70px
+            left: 0px
+            z-index: 10
+            width: 510px
+            height: 90vh
+            background-color: #fff
+            transition: 1s all
+        &_cross
+            display: none
+            position: relative
+            right: 50px
+            top: 60px        
+            width: 26px
+            height: 12px
+            z-index: 10000
+            span
+                display: block
+                height: 2px
+                width: 100%
+                margin-bottom: -2px
+                background-color: #000000
+                transition: 0.3s all
+                &:nth-child(1)
+                    transform: translateY(3px) rotate(-45deg)
+                &:nth-child(2)
+                    transform: translateY(3px) rotate(45deg)
+        &_search
+            display: block
+            position: absolute
+            top: 160px
+            left: 69px
+        p
+            position: relative
+            .srch
+                width: 365px
+                height: 53px
+                font-family: 'PT Sans Narrow'
+                font-style: normal
+                font-weight: 400
+                font-size: 18px
+                padding-left: 15px
+            input::-webkit-search-decoration
+                display: none
+            input::-webkit-search-cancel-button
+                display: none
+            input::-webkit-search-results-button
+                display: none
+            input::-webkit-search-results-decoration
+                display: none
+           
+            .icon
+                position: absolute
+                right: 12px
+                display: inline
+                top: 10px
+        ul
+            // list-style-type: none
+            position: absolute
+            padding: 0px
+            margin-top: 273px
+            width: 365px
+            height: 50vh
+            overflow-x: hidden
+            overflow-y: scroll
+            transition: 2s all
+            &::-webkit-scrollbar-thumb 
+                background: #7070709c
+                border-radius: 8px 
+            li
+                margin-bottom: 43px 
+                width: 365px
+                a
+                    font-family: 'PT Sans Narrow'
+                    font-weight: 400
+                    font-size: 30px
+                    line-height: 39px
+                    text-decoration: none
+                    color: #000000
+                    width: 400px
+            &::-webkit-scrollbar 
+                background: transparent
+                width: 5px 

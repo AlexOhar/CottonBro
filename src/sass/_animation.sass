@@ -1,128 +1,44 @@
-.blockThree
-    &_wrapp
-        height: 100%
-        position: relative
-        
-        div
-            animation-name: cyrcle
-            animation-duration: 35s
-            animation-timing-function: ease-in-out
-            animation-iteration-count: infinite
-            animation-fill-mode: forwards
-            animation-play-state: running
-            transform-origin: left top
-            position: absolute     
-            left: 0px
-            top: 0px
-        div:hover
-            animation-name: cyrcle
-            animation-play-state: paused
-            // animation-name: cyrcle, cyrcleHover
-            // animation-delay: 0s, 0s
-            // animation-duration: 35s, 1s
-            // animation-timing-function: ease, linear
-            // animation-iteration-count: infinite, 1
-            // animation-fill-mode: forwards, forwards
-            // animation-play-state: paused, running
-            // z-index: 20
-
-        .picture1   
-            animation-delay: 0s
-            width: 395px
-            height: 395px
-            left: 0px
-            top: 0px
-            background: url(../img/slider_third/one.png) center center/cover no-repeat
-        .picture2
-            animation-delay: -5s 
-            animation-timing-function: steps(400, jump-start)
-            width: 389px
-            height: 389px
-            left: 50%
-            top: 17%
-            background: url(../img/slider_third/two.png) center center/cover no-repeat
-        .picture3
-            animation-delay: -10s    
-            width: 418px
-            height: 418px
-            left: 67%
-            top: 0%
-            background: url(../img/slider_third/three.png) center center/cover no-repeat
-        .picture4
-            animation-delay: -15s   
-            width: 493px
-            height: 493px
-            left: 65%
-            top: 42%
-            background: url(../img/slider_third/four.png) center center/cover no-repeat
-        .picture5
-            animation-delay: -20s     
-            width: 366px
-            height: 366px
-            left: 39%
-            top: 55%
-            background: url(../img/slider_third/five.png) center center/cover no-repeat
-        .picture6
-            animation-delay: -25s  
-            width: 401px
-            height: 401px
-            left: 4%
-            top: 53%
-            background: url(../img/slider_third/six.png) center center/cover no-repeat
-        .picture7
-            animation-delay: -30s   
-            width: 600px
-            height: 600px
-            left: 10%
-            top: 20%
-            background: url(../img/slider_third/seven.png) center center/cover no-repeat
+// Running 'Sale 20%' - block New Colection
+@keyframes text 
+    0%
+        transform: translate(0, 0)
+    100%
+        transform: translate(932px, 0)
+// Flying cards - block New    
 @keyframes cyrcle
     0%, 100%
-        width: 395px
-        height: 395px
+        width: 330px
+        height: 302px
         left: 0px
         top: 0px 
-        z-index: 7
     14%
-        width: 389px
-        height: 389px
-        left: 50%
-        top: 17%
-        z-index: 4
-    28%
-        width: 418px
-        height: 418px
-        left: 67%
+        width: 330px
+        height: 302px
+        left: 74%
         top: 0%
-        z-index: 6
+    28%
+        width: 300px
+        height: 270px
+        left: 62%
+        top: 35%
     42%
-        width: 493px
-        height: 493px
-        left: 65%
-        top: 42%
-        z-index: 5
+        width: 330px
+        height: 302px
+        left: 74%
+        top: 66%
     56%
-        width: 366px
-        height: 366px
-        left: 39%
-        top: 55%
-        z-index: 1
+        width: 300px
+        height: 270px
+        left: 38%
+        top: 51%
     70%
-        width: 401px
-        height: 401px
-        left: 4%
-        top: 53%
-        z-index: 2
+        width: 330px
+        height: 302px
+        left: 0%
+        top: 66%
     84%   
-        width: 600px
-        height: 600px
-        left: 10%
-        top: 20%
-        z-index: 15
-@keyframes cyrcleHover
-    100%
-        animation-duration: 1s
-        animation-timing-function: ease
-        width: 600px
-        height: 600px
+        width: 300px
+        height: 270px
+        left: 14%
+        top: 35%
         

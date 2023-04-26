@@ -1,0 +1,65 @@
+.blockThree
+    padding: 77px 0px
+    height: 100vh
+    &_wrapp
+        position: relative
+        width: 1280px
+        height: 100%
+        margin: 0 auto
+        &:hover .flyCard
+            animation-name: cyrcle
+            animation-play-state: paused
+        h2
+            font-family: 'Alumni Sans'
+            font-style: normal
+            font-weight: 400
+            font-size: 150px
+            line-height: 180px
+            color: #2b2a2a
+            text-align: center
+            margin-left: 50%
+            transform: translateX(-50%)
+            z-index: 95
+        h3
+            font-family: 'PT Sans Narrow'
+            font-style: normal
+            font-weight: 400
+            font-size: 70px
+            color: #FFFFFF
+            display: flex
+            justify-content: center
+            margin-top: 41%
+        
+        .flyCard
+            animation: cyrcle 35s ease-in-out infinite running
+            transform-origin: left top
+            position: absolute     
+            left: 0px
+            top: 0px
+            transition: .4s all
+            &:hover
+                transition: .4s all
+                transform: translate(-25%, -25%) scale(1.3)
+                z-index: 90
+
+        .picture1   
+            animation-delay: 0s
+            background: url(../img/slider_third/one.png) center center/cover no-repeat
+        .picture2
+            animation-delay: -5s 
+            background: url(../img/slider_third/two.png) center center/cover no-repeat
+        .picture3
+            animation-delay: -10s    
+            background: url(../img/slider_third/three.png) center center/cover no-repeat
+        .picture4
+            animation-delay: -15s   
+            background: url(../img/slider_third/four.png) center center/cover no-repeat
+        .picture5
+            animation-delay: -20s     
+            background: url(../img/slider_third/five.png) center center/cover no-repeat
+        .picture6
+            animation-delay: -25s  
+            background: url(../img/slider_third/six.png) center center/cover no-repeat
+        .picture7
+            animation-delay: -30s   
+            background: url(../img/slider_third/seven.png) center center/cover no-repeat

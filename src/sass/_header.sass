@@ -1,0 +1,113 @@
+.header
+    position: fixed
+    top: 0px
+    height: 100px
+    width: 100%
+    padding: 0 50px
+    background-color: #fff
+    display: flex
+    justify-content: space-between
+    align-items: center
+    z-index: 100
+    &_left
+        width: 277px
+        &_catalog
+            position: relative
+            font-weight: 400
+            line-height: 35px
+            font-size: 35px
+            color: #000000
+            display: block
+            width: 200px
+            text-decoration: none
+            z-index: 100
+            background-color: #ffffff00
+            border: none
+            height: 44px
+            text-align: start
+            &::after
+                position: relative
+                content: ''
+                display: block
+                margin-top: -44px
+                height: 44px
+                width: 10px
+                background: #ffffff
+                margin-left: -15px
+                z-index: 200
+                transition: 2s all
+            &:hover
+                font-weight: 400
+                line-height: 35px
+                color: #000000
+                text-decoration: none
+                &::after
+                    content: ''
+                    margin-left: 150px
+                    transition: 3s all
+            &:visited
+                font-weight: 400
+                line-height: 35px
+                font-size: 35px
+                color: #000000
+                text-decoration-style: none !important
+    &_logo
+        img
+            display: flex
+            margin: 0 auto
+    &_right
+        // position: relative
+        width: 277px
+        display: flex
+        justify-content: space-between
+        justify-items: center
+        align-items: center
+        list-style-type: none
+        a
+            padding: 10px
+            margin: 15px
+            overflow: hidden
+
+            img
+                margin-right: 25px
+            &::after
+                position: relative
+                content: ''
+                display: block
+                margin-top: -44px
+                height: 44px
+                width: 10px
+                background: #ffffff
+                margin-left: -15px
+                z-index: 200
+                transition: 1s all
+            &:hover
+                font-weight: 400
+                line-height: 44px
+                color: #000000
+                text-decoration: none
+                &::after
+                    content: ''
+                    margin-left: 30px
+                    transition: 1s all
+        img
+            display: flex
+            justify-items: center
+    &_button
+        display: none
+    &_mobileHamburger
+        display: none
+    &_mobileMenu
+        display: none
+        a
+            display: none 
+            transition: 1s all
+            &:visited
+                font-weight: 400
+                line-height: 35px
+                font-size: 35px
+                color: #000000
+                text-decoration-style: none !important
+
+            
+            
