@@ -1,80 +1,107 @@
 .selection
-    height: 1323px
-    padding: 136px 50px
+    height: 100vh
+    // width: 100vw
+    padding: 90px 50px
     background: #ffffff
     &_wrapper
+        box-sizing: border-box
         display: flex
+        width: 100%
+        height: 100%
         flex-wrap: nowrap
-        justify-content: space-around
+        justify-content: space-between
+        transition: 2s all
         &_item
-            // width: 100%
-            height: 1003px
+            height: 100%
             transition: 2s all
             h3
                 writing-mode: vertical-lr
-                transform: rotate(-180deg) translateY(-109px)
+                transform: rotate(-180deg)
+                
                 font-family: 'PT Sans Narrow'
                 font-style: normal
                 font-weight: 400
                 font-size: 130px
+                line-height: 130px
                 color: #000000
                 margin: 0
                 cursor: pointer
-                 
-            &:nth-child(1)
-                &:hover
-                    background: url(../img/slider_four/jackets.png) center center/cover no-repeat
-                    width: 612px
-                    h3
-                        display: none
-            &:nth-child(2)
-                &:hover
-                    background: url(../img/slider_four/costumes.png) center center/cover no-repeat
-                    width: 612px
-                    h3
-                        display: none
-            &:nth-child(3)
-                &:hover
-                    background: url(../img/slider_four/sweaters.png) center center/cover no-repeat
-                    width: 612px
-                    h3
-                        display: none
-            &:nth-child(4)
-                &:hover
-                    background: url(../img/slider_four/coats.png) center center/cover no-repeat
-                    width: 612px
-                    h3
-                        display: none
-            &:nth-child(5)
-                &:hover
-                    background: url(../img/slider_four/warmjackets.png) center center/cover no-repeat
-                    width: 612px
-                    h3
-                        display: none
-            &:nth-child(6)
-                &:hover
-                    background: url(../img/slider_four/jeans.png) center center/cover no-repeat
-                    width: 612px
-                    h3
-                        display: none
-            &:nth-child(7)
-                &:hover
-                    background: url(../img/slider_four/dresses.png) center center/cover no-repeat
-                    width: 612px
-                    h3
-                        display: none
-            &:nth-child(8)
-                &:hover
-                    background: url(../img/slider_four/blouses.png) center center/cover no-repeat
-                    width: 612px
-                    h3
-                        display: none
-            &:nth-child(9)
-                &:hover
-                    background: url(../img/slider_four/pants.png) center center/cover no-repeat
-                    width: 612px
-                    h3
-                        display: none
+                transition: 2s all
+            div
+                position: relative
+                height: 100%
+                width: 25vw
+                // height: 93vh
+                height: 100%
+            h4
+                position: absolute
+                width: 453px
+                height: 206px
+                left: -94px
+                top: 211px
+
+                font-family: 'PT Sans Narrow'
+                font-style: normal
+                font-weight: 400
+                font-size: 159px
+                line-height: 206px
+                color: #ffffff00
+                white-space: nowrap
+                -webkit-text-stroke: 1px #ffffff
+                transform: rotate(-90deg)
+            &:nth-child(2n+1)
+                transition: 2s all
+                div
+                    background-position-y: top
             &:nth-child(2n)
+                div
+                    background-position-y: top
+                    h4
+                        top: auto
+                        bottom: 200px
                 h3
-                    transform: rotate(-180deg) translateY(-510px)
+                    height: 100%
+            &:nth-child(0)
+                h3
+                    display: none        
+            &_one
+                background: url(../img/slider_four/jackets.png) center center/cover no-repeat
+                display: none
+            &_two
+                background: url(../img/slider_four/costumes.png) center center/cover no-repeat
+                display: none
+            &_three
+                background: url(../img/slider_four/sweaters.png) center top/cover no-repeat
+                display: none
+                h4
+                    -webkit-text-stroke: 2px #000000
+            &_four
+                background: url(../img/slider_four/coats.png) center top/cover no-repeat
+                display: none
+                h4
+                    -webkit-text-stroke: 2px #000000
+            &_five
+                background: url(../img/slider_four/warmjackets.png) center center/cover no-repeat
+                display: none   
+            &_six
+                background: url(../img/slider_four/jeans.png) center center/cover no-repeat
+                display: none
+            &_seven
+                background: url(../img/slider_four/dresses.png) center top/cover no-repeat
+                display: none
+                h4
+                    -webkit-text-stroke: 2px #000000
+            &_eight
+                background: url(../img/slider_four/blouses.png) center center/cover no-repeat
+                display: none  
+                h4
+                    -webkit-text-stroke: 2px #000000
+            &_nine
+                background: url(../img/slider_four/pants.png) center center/cover no-repeat
+                display: none
+                h4
+                    -webkit-text-stroke: 2px #000000
+.anim
+    display: block
+    transition: 2s all
+    

@@ -75,52 +75,27 @@
         display: block
         position: fixed
         top: -1500px
-        padding: 0 0 50px 70px
+        padding: 0 0 50px 50px
         left: 0px
-        z-index: 10
-        width: 510px
-        height: 80vh
+        z-index: 95
+        min-width: 320px
+        width: 27%
+        height: 90vh
         background-color: #fff
         transition: 1s all
         &_active
-            display: block
-            position: fixed
             top: 0px
-            padding: 0 0 50px 70px
-            left: 0px
-            z-index: 10
-            width: 510px
-            height: 90vh
-            background-color: #fff
-            transition: 1s all
-        &_cross
-            display: none
-            position: relative
-            right: 50px
-            top: 60px        
-            width: 26px
-            height: 12px
-            z-index: 10000
-            span
-                display: block
-                height: 2px
-                width: 100%
-                margin-bottom: -2px
-                background-color: #000000
-                transition: 0.3s all
-                &:nth-child(1)
-                    transform: translateY(3px) rotate(-45deg)
-                &:nth-child(2)
-                    transform: translateY(3px) rotate(45deg)
         &_search
             display: block
             position: absolute
-            top: 160px
-            left: 69px
+            width: 70%
+            top: 150px
+            left: 50px
         p
             position: relative
+            width: 100%
             .srch
-                width: 365px
+                width: 100%
                 height: 53px
                 font-family: 'PT Sans Narrow'
                 font-style: normal
@@ -135,6 +110,13 @@
                 display: none
             input::-webkit-search-results-decoration
                 display: none
+            input[type="search"] 
+                -webkit-appearance: none
+                -moz-appearance: none
+                appearance: none
+                background-color: #ffffff
+            input:focus
+                outline: none  
            
             .icon
                 position: absolute
@@ -142,21 +124,25 @@
                 display: inline
                 top: 10px
         ul
-            // list-style-type: none
             position: absolute
             padding: 0px
             margin-top: 273px
-            width: 365px
+            width: 70%
             height: 50vh
-            overflow-x: hidden
-            overflow-y: scroll
+            overflow-y: auto
             transition: 2s all
             &::-webkit-scrollbar-thumb 
                 background: #7070709c
-                border-radius: 8px 
+                border-radius: 8px
+            &::-webkit-overflow
+                -scrolling: touch
+            &::-webkit-scrollbar
+                width: 5px
+            &::-webkit-scrollbar-thumb:hover 
+                background: #555
             li
                 margin-bottom: 43px 
-                width: 365px
+                width: 80%
                 a
                     font-family: 'PT Sans Narrow'
                     font-weight: 400
@@ -165,6 +151,3 @@
                     text-decoration: none
                     color: #000000
                     width: 400px
-            &::-webkit-scrollbar 
-                background: transparent
-                width: 5px 

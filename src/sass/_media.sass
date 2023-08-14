@@ -8,54 +8,78 @@
                     margin-top: 225px
                     height: 50vh
     .selection
-        height: 100vh
-        padding-top: 70px
+        padding: 80px 50px
         &_wrapper
             &_item
-                height: 800px
                 h3
                     font-size: 90px
+                    line-height: 100px
+                h4
+                    font-size: 130px
+                    line-height: 130px
+                &:nth-child(2n+1)
+                    div
+                        h4
+                            top: 130px
                 &:nth-child(2n)
-                    h3
-                        transform: rotate(-180deg) translateY(-460px)
+                    div
+                        h4
+                            top: auto
+                            bottom: 180px  
     .blockTwo
         &_left
             margin-top: 90px
         &_button
             margin-top: 50px
     .season
-        height: 2050px
-        padding-top: 100px
+        height: 1975px
+        padding: 80px 50px
         h1
             font-size: 120px
     .subscribe
         height: 100vh
         padding: 80px 50px
-        &_image
-            height: 750px
-        h3
-            margin-top: 180px
-            font-size: 55px
+        &_wrapp_left
+            h3
+                margin-top: 150px
+                font-size: 55px
     .forYou
-        height: 100vh
         padding: 80px 50px
-        &_item
-            height: 52vh
-            .photo
-                height: 100%
         h2
             font-size: 120px
+        &_wrapp
+            &_item
+                height: 90vh
+                .photo
+                    height: 100%
     .footer
         &_pay
             img
                 margin-right: 30px
+    // page categories
+    .categories
+        width: 100vw
+        padding: 80px 50px
+        &_wrapper
+            gap: 15px
+            row-gap: 50px
+        &_header
+            font-size: 120px
+        &_filterBtn
+            margin-top: 60px
+        &_filter_prices
+            &_input_field
+                input
+                    padding-left: 0
+            &_btns_reset
+                margin-top: 0
+
 @media (max-width: 1440px)
     .header
         height: 60px
         &_left
             width: 200px
             &_catalog
-                // width: 200px
                 font-size: 28px
                 line-height: 28px
         &_logo
@@ -64,7 +88,6 @@
         &_right
             width: 200px
             a
-                // margin-top: 15px
                 margin: 5px
                 img
                     transform: scale(0.7)
@@ -81,7 +104,6 @@
                     margin-bottom: 30px
     .firstScreen
         margin-top: 60px
-        // height: 100vh
         &_header
             font-size: 250px  
         &_wrapper
@@ -94,7 +116,6 @@
         &_video
             top: 0px
             height: 140vh
-            // height: auto
     .blockTwo
         &_header
             font-size: 130px
@@ -103,21 +124,10 @@
             height: 65px
             padding: 5px 0px
             margin-top: 50px
-            // margin-top: 30px
         &_block
             bottom: 100px
             p
                 font-size: 80px
-    // .blockThree
-    //     padding: 50px 0px
-    //     &_wrapp
-    //         width: 1200px
-    //         h2
-    //             font-size: 130px
-    //         .flyCard
-    //             transform: scale(0.9)
-    //             &:hover
-    //                 transform: translate(-25%, -25%) scale(1.2)
     .blockThree
         height: 130vh
         &_wrapp
@@ -135,63 +145,115 @@
         &_wrapp
             &_firstLine
                 height: 500px
-                margin-right: -2890px
+                margin-right: -400px
                 &_items
-                    // margin-left: 10px
                     img
                         height: 500px
                         width: auto
             &_secondLine
                 height: 500px
                 &_items
-                    // margin-right: 10px
                     img
                         height: 500px
                         width: auto
     .selection
         padding: 80px 50px
-        // height: 100vh
         &_wrapper
             &_item
-                height: 450px
                 h3
-                    margin-top: -115px
-                    font-size: 80px
-                    line-height: 104px
+                    font-size: 60px
+                    line-height: 60px
+                h4
+                    font-size: 60px
+                    line-height: 60px
+                &:nth-child(2n+1)
+                    div
+                        h4
+                            top: -80px
                 &:nth-child(2n)
-                    h3
-                        transform: rotate(-180deg) translateY(-290px)
+                    div
+                        h4
+                            top: auto
+                            bottom: 140px
+                &_three
+                    h4
+                        -webkit-text-stroke: 1px #000000
+                &_four
+                    h4
+                        -webkit-text-stroke: 1px #000000
+                &_seven
+                    h4
+                        -webkit-text-stroke: 1px #000000
+                &_eight 
+                    h4
+                        -webkit-text-stroke: 1px #000000
+                &_nine
+                    h4
+                        -webkit-text-stroke: 1px #000000
     .subscribe
-        h3
-            margin-top: 0
-            font-size: 45px
-        &_image
-            height: 440px
-        input
-            width: 460px
+        &_wrapp_left
+            h3
+                margin-top: 0
+                font-size: 45px
     .forYou
         padding: 40px 50px
         h2
             font-size: 80px
             line-height: 140px
-        &_item
-            height: 50vh
+        &_wrapp
+            &_item
+                height: 80vh
     .footer
         span
             margin-top: 50px
-        input
-            width: 400px
-        ul
-            li
-                margin-bottom: 20px
-        &_pay
-            img
-                margin-right: 7px
-        &_connect
-            a
-                margin-right: 20px
-    
-
+        &_wrapper
+            &_left
+                input
+                    width: 400px
+            &_center
+                ul
+                    margin-top: 29px
+                    li
+                        margin-bottom: 20px
+                        a
+                            font-size: 18px
+            &_right
+                &_pay
+                    margin-top: 100px
+                    img
+                        margin-right: 7px
+                &_connect
+                    a
+                        margin-right: 10px
+                        font-size: 18px
+    // page categories
+    .categories
+        padding: 80px 50px
+        &_wrapper
+            gap: 15px
+            row-gap: 50px
+            &_descr_hit
+                font-size: 45px
+            &_name
+                margin-top: 15px
+            &_price
+                margin-top: 5px
+        &_header
+            font-size: 100px
+        &_filterBtn
+            margin-top: 50px
+        &_filter_prices
+            &_btns
+                &_reset
+                    height: 65px
+                    width: 250px
+                    margin-top: 0
+                    font-size: 18px
+                &_result
+                    height: 65px
+                    width: 250px
+            &_wrapp
+                width: 80%
 @media (max-width: 1200px)
     .blockThree
         &_wrapp
@@ -208,7 +270,7 @@
         &_wrapp
             &_firstLine
                 height: 350px
-                margin-right: -4270px
+                margin-right: -10px
                 &_items
                     margin-left: 10px
                     img
@@ -221,8 +283,82 @@
                     img
                         height: 350px
                         width: auto
-
-
+    .selection
+        padding: 50px 50px
+        &_wrapper
+            overflow-x: hidden
+            &_item
+                width: 90%
+                transition: 2s all
+                h3
+                    display: none
+                    font-size: 50px
+                    line-height: 50px
+                h4
+                    height: 50px
+                    left: -200px
+                    font-size: 50px
+                    line-height: 50px
+                &:nth-child(2n+1)
+                    div
+                        display: block
+                        width: auto
+                        transition: 2s all
+                        h4
+                            display: none
+                            top: auto
+                            bottom: 200px
+                    h3
+                        display: none
+                &:nth-child(2n)
+                    div
+                        display: block
+                        width: auto
+                        background-position-y: top
+                        transition: 2s all
+                        h4
+                            display: none
+                            top: auto
+                            bottom: 200px
+                    h3
+                        display: none
+    .subscribe
+        &_wrapp_left
+            padding-left: 40px
+            h3
+                margin-top: 10%
+                font-size: 30px
+                line-height: 40px
+            input
+                width: 80%
+    .forYou
+        padding: 40px 50px
+        h2
+            font-size: 80px
+            line-height: 140px
+        &_wrapp
+            &_item
+                height: 75vh
+    .footer
+        span
+            margin-top: 50px
+        &_wrapper
+            &_left
+                input
+                    width: 100%
+                button
+                    width: 100%
+            &_center
+                ul
+                    li
+                        margin-bottom: 20px
+            &_right
+                &_pay
+                    img
+                        margin-right: 7px
+                &_connect
+                    a
+                        margin-right: 0px
 @media (max-width: 991px)
     .firstScreen
         &_header
@@ -251,8 +387,55 @@
                 transform: scale(0.6)
                 &:hover
                     transform: translate(0%, 0%) scale(0.7)
-
-
+    .subscribe
+        &_wrapp_left
+            // padding-left: 40px
+            h3
+                margin-top: 0%
+                font-size: 25px
+                line-height: 35px
+            input
+                margin-top: 40px
+                width: 80%
+            button
+                width: 80%
+    .footer
+        span
+            margin-top: 50px
+        &_wrapper
+            &_left
+                grid-column: 1/4
+                &_subheader
+                    font-size: 18px
+                input
+                    margin-top: 30px
+                    width: 100%
+                button
+                    margin-top: 30px
+                    height: 55px
+            &_center
+                grid-column: 5/9
+                justify-content: space-between
+                gap: 20px
+                ul
+                    li
+                        margin-bottom: 10px
+                        a
+                            font-size: 12px
+            &_right
+                grid-column: 10/13
+                &_pay
+                    margin-top: 130px
+                    img
+                        margin-right: 5px
+                        width: 45px
+                &_connect
+                    margin-top: 40px
+                    a
+                        margin-right: 0px
+                        img
+                            width: 30px
+                            height: 30px
 @media (max-width: 767px)
     .header
         padding: 0 30px
@@ -308,6 +491,15 @@
         height: auto
         &_wrapp_firstLine
             margin-top: 25px
+    .subscribe
+        &_wrapp
+            &_left
+                padding: 0
+                h3
+                    font-size: 20px
+                    line-height: 30px
+                button
+                    margin-top: 50px
 
 @media (max-width: 575px)
     .header
@@ -321,6 +513,9 @@
                 &:hover
                     &::after
                         margin-left: 90px
+        &_logo
+            img
+                height: 30px
         &_right
             width: 80px
             height: 30px
@@ -373,8 +568,9 @@
                 transform: rotate(-45deg)
         .mobile_active
             right: 0px
-        &_mobileMenu
             display: flex
+        &_mobileMenu
+            display: none
             flex-direction: column
             justify-content: space-around
             position: absolute
@@ -382,7 +578,6 @@
             right: -150px
             width: 150px
             height: 200px
-            // padding-top: 20px
             padding: 20px 0 20px 20px
             background-color: #ffffff
             z-index: -5
@@ -397,9 +592,9 @@
     .menu_dropDown
         &_active
             width: 250px
-            padding: 0 0 20px 20px
+            padding: 0 20px
         p .srch
-            width: 210px
+            width: 100%
             border-radius: 0px
             border: solid 1px
         p .icon
@@ -408,12 +603,18 @@
         &_search
             left: 20px
             top: 80px
+            width: 90%
         ul
-            width: 200px
+            width: 90%
+            overflow-y: scroll
+            
+            li
+                width: 50%
         .list_item
             font-size: 20px
             padding-left: 15px
             line-height: 18px
+            
     .firstScreen
         height: 100vh
         background: url(../img/bg/bg_1.png) 38% center/cover no-repeat
@@ -430,10 +631,7 @@
             margin-top: 0px
             font-size: 55px
         .button
-            // width: 110px
-            // height: 30px
             margin-top: 30px
-            // font-size: 12px
         .carousel-inner
             height: 350px
             img
@@ -446,32 +644,32 @@
         .carousel-control-prev-icon
             display: none
         &_block p
-            font-size: 120px
+            font-size: 70px
             -webkit-text-stroke: 1px #ffffff
             padding-top: 25px
             animation: text 8s infinite linear
     .blockThree
-        // height: 1740px
         height: auto
         &_wrapp
             position: relative
             display: flex
             flex-direction: column
             width: 90vw
+            height: 100%
             h2
                 font-size: 60px
                 line-height: 60px
+                z-index: 9
             a
                 margin-top: 20px
                 display: inline-flex
-                text-decoration-line: none
+                text-decoration-line: none  
             h3
                 font-size: 30px
             .picture6
                 display: none
             .picture7
                 display: none
-
             .flyCard
                 position: relative
                 width: 100%
@@ -481,6 +679,8 @@
                 background-position-y: top
                 &:hover
                     transform: none
+    .blockThree_wrapp > *:nth-last-child(-n+2)
+        display: none
     .season
         height: auto
         padding: 50px 30px
@@ -493,7 +693,7 @@
             &_firstLine
                 height: 250px
                 margin-top: 30px
-                margin-right: -5270px
+                margin-right: 0px
                 &_items
                     img
                         height: 250px
@@ -503,3 +703,98 @@
                 &_items
                     img
                         height: 250px
+    .selection
+        height: auto
+        padding: 50px 5vw
+        &_wrapper
+            flex-direction: column
+            height: auto
+            width: 100%
+            gap: 20px
+            &_item
+                height: 50vh
+                width: 100%
+                &:nth-child(2n+1)
+                    display: none
+                &:nth-child(2n)
+                    div 
+                        h4
+                            display: block
+                            bottom: 80px
+                            left: -30px
+                            width: auto
+    .subscribe
+        padding: 50px 0
+        height: auto
+        &_wrapp
+            &_left
+                margin: 0 auto
+                padding: 5vw
+                width: 100%
+                h3
+                    margin-top: 0
+                    font-size: 25px
+                    line-height: 35px
+                input
+                    width: 100%
+                button
+                    width: 100%
+            &_image
+                display: none
+    .forYou
+        padding: 40px 5vw
+        h2
+            text-align: center
+            font-size: 80px
+            line-height: 100px
+            padding-left: 0px
+        &_wrapp
+            flex-direction: column
+            gap: 20px
+            &_item
+                height: 90vh
+            &_descr
+                h5
+                    font-size: 18px
+                    line-height: normal
+                    margin-top: 10px
+                h4
+                    font-size: 22px
+                    line-height: normal
+                    margin-top: 10px
+    .footer
+        height: 100%
+        padding: 0 5vw 30px 5vw
+        span
+            margin: 40px 0 20px 0
+        header
+            font-size: 40px
+            line-height: normal
+        &_wrapper
+            &_left
+                grid-column: 1/13
+                &_subheader
+                    margin-top: 15px
+                &_input
+                    margin-top: 20px
+            &_center
+                grid-column: 1/13
+                ul
+                    margin-top: 20px
+                    li
+                        a
+                            font-size: 17px
+            &_right           
+                grid-column: 1/13
+                &_pay
+                    margin-top: 20px
+                    img
+                        width: 45px
+                &_connect
+                    margin-top: 5px
+                    justify-content: flex-start
+                    a
+                        margin-right: 15px
+                        img
+                            width: 30px
+                            height: 30px
