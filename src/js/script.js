@@ -129,20 +129,12 @@ function scrollAnimationCards(line, side) {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    scrollAnimationCards(firstLine,'left');
-    scrollAnimationCards(secondLine, 'right');
+    const page = document.querySelector('title');
+    if (page.innerHTML === "CottonBro") {
+        scrollAnimationCards(firstLine,'left');
+        scrollAnimationCards(secondLine, 'right');
+    }
 });
-
-//animation selection
-
-// function resizeSelection() {
-//     if (window.innerHeight > 1200) {
-
-//     }
-// }
-
-// window.onload = resizeSelection;
-// window.onresize = resizeSelection;
 
 function showCard(item) {
     item.lastElementChild.style.cssText = 'display: none';
@@ -166,46 +158,33 @@ function removeAllCards(items) {
 
 let selectionItems = document.querySelectorAll('.selection_wrapper_item');
 window.addEventListener('DOMContentLoaded', () => {
-    // if (document.documentElement.clientWidth > 1200) {
-    //     defaultCards(selectionItems);
-    // }
-    if (document.documentElement.clientWidth > 1200) {
-        // console.log(document.documentElement.clientWidth);
-        defaultCards(selectionItems);
-        selectionItems.forEach(item => {
-            item.addEventListener('mouseover', (e) => {
-                if(e.type==="mouseover") {
-                    removeAllCards(selectionItems);
-                    showCard(item);
-                } else if(e.type==="mouseout") {
-                    defaultCards(item);
-                }
+    const page = document.querySelector('title');
+    if (page.innerHTML === "CottonBro") {
+        if (document.documentElement.clientWidth > 1200) {
+            defaultCards(selectionItems);
+            selectionItems.forEach(item => {
+                item.addEventListener('mouseover', (e) => {
+                    if(e.type==="mouseover") {
+                        removeAllCards(selectionItems);
+                        showCard(item);
+                    } else if(e.type==="mouseout") {
+                        defaultCards(item);
+                    }
+                });
             });
-        });
-    
-    } else if (document.documentElement.clientWidth < 1200 && document.documentElement.clientWidth > 700) {
-        selectionItems.forEach(item => {
-            item.addEventListener('mouseover', (e) => {
-                if(e.type === "mouseover") {
-                    item.firstChild.style.cssText = 'width: 130%'
-                } 
-                // else if(e.type === "mouseout") {
-                //     item.firstChild.style.cssText = 'width: 90%'
-                // }
+        } else if (document.documentElement.clientWidth < 1200 && document.documentElement.clientWidth > 700) {
+            selectionItems.forEach(item => {
+                item.addEventListener('mouseover', (e) => {
+                    if(e.type === "mouseover") {
+                        item.firstChild.style.cssText = 'width: 130%'
+                    } 
+                });
+                item.addEventListener('mouseout', (e) => {
+                    if(e.type === "mouseout") {
+                        item.firstChild.style.cssText = 'width: 90%'
+                    }
+                });
             });
-            item.addEventListener('mouseout', (e) => {
-                if(e.type === "mouseout") {
-                    item.firstChild.style.cssText = 'width: 90%'
-                }
-            });
-        });
-    
+        }
     }
 });
-
-
-// selectionItems.forEach(item => {
-//     item.addEventListener('mouseout', defaultCards(item));
-// });
-
-

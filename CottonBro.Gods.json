@@ -1,0 +1,221 @@
+[{
+  "_id": 130001,
+  "photo": "img/coats/beige-coat.jpg",
+  "name": "Пальто Elite",
+  "price": 5400,
+  "size": [
+    "S",
+    "M",
+    "L"
+  ],
+  "colors": [
+    "серый",
+    "бежевый",
+    "черный"
+  ],
+  "category": "coats"
+},
+{
+  "_id": 130002,
+  "photo": "img/coats/blue_fur_coat.jpg",
+  "name": "Пальто Fury",
+  "price": 6200,
+  "size": [
+    "S",
+    "M",
+    "L"
+  ],
+  "colors": [
+    "серый",
+    "бежевый"
+  ],
+  "category": "coats"
+},
+{
+  "_id": 130003,
+  "photo": "img/coats/brown_coat-hit.jpg",
+  "name": "Кожаный тренч",
+  "price": 5100,
+  "size": [
+    "S",
+    "XS",
+    "M",
+    "L"
+  ],
+  "colors": [
+    "серый",
+    "бежевый",
+    "черный",
+    "коричневый"
+  ],
+  "category": "coats",
+  "hits": true
+},
+{
+  "_id": 130004,
+  "photo": "img/coats/camel-color-isolated-on-white.jpg",
+  "second-photo": "img/coats/camel-color-isolated-on-white-2.jpg",
+  "name": "Пальто Camel",
+  "price": 3400,
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+  ],
+  "colors": [
+    "серый",
+    "бежевый",
+    "черный",
+    "белый"
+  ],
+  "category": "coats"
+},
+{
+  "_id": 130005,
+  "photo": "img/coats/dark-gray.jpg",
+  "name": "Пальто Gray Autumn",
+  "price": 5600,
+  "size": [
+    "S",
+    "XS",
+    "M",
+    "L"
+  ],
+  "colors": [
+    "серый",
+    "черный"
+  ],
+  "category": "coats",
+  "hits": true
+},
+{
+  "_id": 130006,
+  "photo": "img/coats/elegant.jpg",
+  "second-photo": "img/coats/elegant-2.jpg",
+  "name": "Пальто Warmlife",
+  "price": 5800,
+  "size": [
+    "S",
+    "M",
+    "L"
+  ],
+  "colors": [
+    "серый",
+    "бежевый",
+    "черный",
+    "оранжевый"
+  ],
+  "category": "coats"
+},
+{
+  "_id": 130007,
+  "photo": "img/coats/elite.jpg",
+  "name": "Тренч Beauty",
+  "price": 5000,
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "colors": [
+    "серый",
+    "бежевый",
+    "черный",
+    "красный"
+  ],
+  "category": "coats"
+},
+{
+  "_id": 130008,
+  "photo": "img/coats/light-gray.jpg",
+  "name": "Пальто Light Gray",
+  "price": 6200,
+  "size": [
+    "S",
+    "M",
+    "L"
+  ],
+  "colors": [
+    "серый",
+    "бежевый",
+    "черный"
+  ],
+  "category": "coats"
+},
+{
+  "_id": 130009,
+  "photo": "img/coats/midi_trench.jpg",
+  "name": "Тренч Paris",
+  "price": 4800,
+  "size": [
+    "S",
+    "M",
+    "L"
+  ],
+  "colors": [
+    "серый",
+    "бежевый"
+  ],
+  "category": "coats"
+},
+{
+  "_id": 130010,
+  "photo": "img/coats/red-classic.jpg",
+  "name": "Пальто Flame",
+  "price": 5900,
+  "size": [
+    "S",
+    "M",
+    "L"
+  ],
+  "colors": [
+    "серый",
+    "бежевый",
+    "красный"
+  ],
+  "category": "coats"
+},
+{
+  "_id": 130011,
+  "photo": "img/coats/sand_coat.jpg",
+  "second-photo": "img/coats/sand_coat-2.jpg",
+  "name": "Тренч Prestige",
+  "price": 7200,
+  "size": [
+    "S",
+    "XS",
+    "M",
+    "L",
+    "XL"
+  ],
+  "colors": [
+    "серый",
+    "бежевый",
+    "черный",
+    "коричневый"
+  ],
+  "category": "coats"
+},
+{
+  "_id": 130012,
+  "photo": "img/coats/wearing-long-gray-coat.jpg",
+  "second-photo": "img/coats/wearing-long-gray-coat-2.jpg",
+  "third-photo": "img/coats/wearing-long-gray-coat-3.jpg",
+  "name": "Leather trench",
+  "price": 7100,
+  "size": [
+    "S",
+    "M",
+    "L",
+    "XL"
+  ],
+  "colors": [
+    "серый",
+    "белый",
+    "черный"
+  ],
+  "category": "coats"
+}]
