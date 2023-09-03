@@ -45,21 +45,23 @@ app.use(express.static(__dirname));
 app.get('/goods', async (req, res) => {
   try {
     // Получение параметров фильтрации из строки запроса
-    const { sortingMethod, size, color, price, category, date } = req.query;
-
+    const { sortingMethod, category, size, color, price } = req.query;
     // Создание объекта фильтрации
+    console.log(size);
     const filter = {};
     if (category) {
       filter.category = category;
     }
-    if (size) {
+    if (size && size !== 'null') {
       filter.size = size;
     }
     if (color) {
       filter.colors = { $in: color.split(',') };
     }
     if (price) {
-      const { min, max } = JSON.parse(price);
+      const twoPrices = JSON.parse(price),
+            min = twoPrices.min,
+            max = twoPrices.max;
       filter.price = {};
       if (min) {
         filter.price.$gte = Number(min);
@@ -67,11 +69,7 @@ app.get('/goods', async (req, res) => {
       if (max) {
         filter.price.$lte = Number(max);
       }
-    }
-    if (date) {
-      filter.date = date;
-    }
-
+    };
     // Получение данных из коллекции goods с учетом фильтрации
     console.log(filter);
     let goods = await good.find(filter);
@@ -88,8 +86,7 @@ app.get('/goods', async (req, res) => {
       }
     });
 
-    console.log(`после сортировки ${sortingMethod}`, goods);
-
+    // console.log(`после сортировки методом ${sortingMethod}`, goods);
     // Отправка отфильтрованных и отсортированных данных клиенту
     res.json(goods);
   } catch (error) {

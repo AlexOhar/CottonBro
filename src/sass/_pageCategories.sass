@@ -284,19 +284,19 @@
 .loading
     display: none
     position: fixed
-    top: 90px
+    top: 0px
     width: 100%
     height: 100%
     background-color: #b7b5b58c
-    z-index: 100
+    z-index: 90
     &_wrapper 
         display: flex
         justify-content: center
         align-items: center
         height: 100vh   
         &_main-circle 
-            width: 150px
-            height: 150px
+            width: 110px
+            height: 110px
             border: 4px solid #000000
             border-top: 4px solid transparent  
             border-right: 4px solid transparent
@@ -305,42 +305,24 @@
             display: flex
             justify-content: center
             align-items: center
-            animation: rotate 2s infinite
-            // &::before 
-            //     width: 100%
-            //     height: 100%
-            //     position: absolute
-            //     content:''
-            //     border:4px solid transparent
-            //     border-right:4px solid blue
-            //     transform: rotate(40deg)
-            //     border-radius:50%    
+            animation: rotate 2s infinite  
         &_green-circle 
             animation: rotate 2s infinite .4s
             display: flex
             justify-content: center
             align-items: center
-            width: 120px
-            height: 120px
+            width: 80px
+            height: 80px
             border: 4px solid #000000
             border-top: 4px solid transparent
             border-right: 4px solid transparent
             transform: rotate(-20deg)
             border-radius: 50%
             position: relative
-            // &::before 
-            //     content:''
-            //     width: 100%
-            //     height: 100%
-            //     border-radius:50%
-            //     position: absolute
-            //     border:4px solid transparent
-            //     border-right:4px solid blue
-            //     transform: rotate(60deg)
         &_brown-circle 
             animation: rotate 2s infinite .6s
-            width: 80px
-            height: 80px
+            width: 50px
+            height: 50px
             border: 4px solid #000000
             border-top: 4px solid transparent
             border-right: 4px solid transparent
