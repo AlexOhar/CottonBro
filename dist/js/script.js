@@ -190,22 +190,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 
-window.addEventListener("DOMContentLoaded", () => {
-    //links in dropDown menu
-    const menu = document.querySelector('.menu_dropDown'),
-          menuItem = menu.querySelectorAll('.list_item');
-
-    menuItem.forEach(item => {
-        item.addEventListener('click', event => {
-            event.preventDefault();
-            const category = event.target.dataset.category;
-            const categoryName = event.target.textContent;
-            localStorage.setItem('selectedCategory', category);
-            localStorage.setItem('selectedCategoryName', categoryName);
-            window.location.href = `categories.html`;
-        });
-    });
-
+window.addEventListener("DOMContentLoaded", async () => {
     //links in selection
     const selectionItem = document.querySelectorAll('.selection_wrapper_item');
 
@@ -248,7 +233,52 @@ window.addEventListener("DOMContentLoaded", () => {
             window.location.href = `categories.html`;
         });
     });
+    const categoryForYou = localStorage.getItem('selectedCategory');
+    await createSpecialBlock('Для Тебя', 0, categoryForYou);
 });
 
 
-// onclick="location.href='http://localhost:3000/';"
+
+async function createSpecialBlock(blockName, numberSpecialBlock, category) {
+    const specialBlock = document.querySelector(`#specialBlock${numberSpecialBlock}`);
+    specialBlock.innerHTML = `<h2>${blockName}</h2>`;
+    const wrapp = document.createElement('div');
+    wrapp.classList.add('specialBlock_wrapp');
+    specialBlock.append(wrapp);
+    let categoryChoosed;
+    if (!category) {
+        categoryChoosed = 'coats';
+    } else {
+        categoryChoosed = category;
+    };
+    const response = await fetch(`http://localhost:3000/goods?sortingMethod=novelties&category=${categoryChoosed}`);
+    const goodsData = await response.json();
+    const firstFourGoods = goodsData.slice(0, 4);
+    firstFourGoods.forEach(good => {
+        const firstColor = Object.keys(good.photo)[0];
+        const firstPhotos = good.photo[firstColor][0];
+        const card = document.createElement('div');
+        card.classList.add('specialBlock_wrapp_item');
+        card.setAttribute('id', `${good._id}`);
+        card.innerHTML = `  <img class="specialBlock_wrapp_photo" src="${firstPhotos}" alt="goodPhoto">
+                            <div class="specialBlock_wrapp_descr">
+                                <h5>${good.name}</h5>
+                                <h4>${good.price}грн</h4>
+                            </div>`
+        wrapp.append(card);
+        card.addEventListener('click', () => {
+            let viewedProducts = JSON.parse(localStorage.getItem('viewedProducts')) || [];
+            let productExists = viewedProducts.find(item => item._id === good._id);
+            if (!productExists) {
+                if (viewedProducts.length >= 10) {
+                    viewedProducts.pop();
+                }
+                viewedProducts.unshift(good);
+                localStorage.setItem('viewedProducts', JSON.stringify(viewedProducts));
+            };
+            const id = card.getAttribute('id');
+            localStorage.setItem('cardProductId', id);
+            window.location.href = 'cardProduct.html';
+        });
+    });
+};

@@ -43,15 +43,15 @@
             h3
                 margin-top: 150px
                 font-size: 55px
-    .forYou
+    .specialBlock
         padding: 80px 50px
         h2
             font-size: 120px
-        &_wrapp
-            &_item
-                height: 90vh
-                .photo
-                    height: 100%
+        // &_wrapp
+        //     &_item
+        //         height: 90vh
+        //         &_photo
+        //             height: 100%
     .footer
         &_pay
             img
@@ -195,14 +195,14 @@
             h3
                 margin-top: 0
                 font-size: 45px
-    .forYou
+    .specialBlock
         padding: 40px 50px
         h2
             font-size: 80px
             line-height: 140px
-        &_wrapp
-            &_item
-                height: 80vh
+        // &_wrapp
+        //     &_item
+        //         height: 80vh
     .footer
         span
             margin-top: 50px
@@ -331,14 +331,14 @@
                 line-height: 40px
             input
                 width: 80%
-    .forYou
+    .specialBlock
         padding: 40px 50px
         h2
             font-size: 80px
             line-height: 140px
-        &_wrapp
-            &_item
-                height: 75vh
+        // &_wrapp
+        //     &_item
+        //         height: 75vh
     .footer
         span
             margin-top: 50px
@@ -741,7 +741,7 @@
                     width: 100%
             &_image
                 display: none
-    .forYou
+    .specialBlock
         padding: 40px 5vw
         h2
             text-align: center
@@ -750,9 +750,10 @@
             padding-left: 0px
         &_wrapp
             flex-direction: column
-            gap: 20px
+            // gap: 20px
             &_item
-                height: 90vh
+                flex: 1 0 calc(100% - 20px)
+                max-width: calc(100% - 20px)
             &_descr
                 h5
                     font-size: 18px

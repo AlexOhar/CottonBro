@@ -1,4 +1,6 @@
 //start upload page
+localStorage.setItem('chooseColor', 'none');
+
 function getCategory() {
     const gotCategory = localStorage.getItem('selectedCategory'),
           gotCategoryName = localStorage.getItem('selectedCategoryName'),
@@ -75,7 +77,7 @@ const filterColors = document.querySelector('.categories_filter_colors'),
       lastElColor = filterColors.lastElementChild,
       filterSizes = document.querySelector('.categories_filter_sizes'),
       btnMoreSizes = document.querySelector('.categories_filter_sizes_more'),
-      colors = ['Красный', 'Синий','Розовый','Белый','Оранжевый','Зеленый','Желтый'],
+      colors = ['Белый', 'Красный', 'Синий', 'Розовый', 'Голубой', 'Оранжевый', 'Зеленый', 'Желтый'],
       sizes = ['XL','XXL'];
 let checkBoxSizes,
     checkBoxColors;
@@ -136,20 +138,45 @@ function loadingGoods(funct, ...args) {
             });
 };
 //get goods from dataBase and create good cards on page
-async function gettingGoods(endUrl, category, hit) {
+async function gettingGoods(endUrl, category, color, hit) {
     try {
         // const filterData = filter;
         const response = await fetch(`http://localhost:3000/goods?${endUrl}`);
         const goodsData = await response.json();
         goodsData.forEach(good => {
             if(!good.hits && good.category == category) {
-                createGoods(good.photo, good.name, good.price, good.hits, good._id);
-            } 
+                let photo;
+                if (color && Array.isArray(color)) {
+                    for (let col of color) {
+                        if (good.photo[col]) {
+                            photo = good.photo[col][0];
+                            break;
+                        }
+                    }
+                }
+                if (!photo) {
+                    const firstColor = Object.keys(good.photo)[0];
+                    photo = good.photo[firstColor][0];
+                }
+                createGoods(photo, good.name, good.price, good.hits, good._id, good);
+            }
+            const viewedProducts = JSON.parse(localStorage.getItem('viewedProducts')) || [];
+            if (viewedProducts.length < 4) {
+                const fourViewedCard = goodsData.slice(0, 4);
+                fourViewedCard.forEach(card => {
+                    let productExists = viewedProducts.find(item => item._id === card._id);
+                    if (!productExists) {
+                        viewedProducts.unshift(card);
+                        localStorage.setItem('viewedProducts', JSON.stringify(viewedProducts));
+                    };
+                    console.log('добавлено 4 товара в массив');
+                });
+            };
         });
         if (hit) {
             goodsData.forEach(good => {
                 if(good.hits && good.category== category) {
-                    createGoods(good.photo, good.name, good.price, good.hits, good._id);
+                    createGoods(good.photoHit, good.name, good.price, good.hits, good._id, good);
                 } 
             });
         }
@@ -161,7 +188,7 @@ async function gettingGoods(endUrl, category, hit) {
 document.addEventListener("DOMContentLoaded", () => {
     clearAndCreateGoods() 
         .then(() => {
-            loadingGoods(gettingGoods, `sortingMethod=novelties&category=${category}`, category, true)
+            loadingGoods(gettingGoods, `sortingMethod=novelties&category=${category}`, category, false, true)
                 .finally(() => {
                     setTimeout(() => {
                         document.querySelector('.loading').style.display = 'none';
@@ -173,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 })
 
-function createGoods(photo, name, price, hit, id) {
+function createGoods(photo, name, price, hit, id, good) {
     const item = document.createElement('div');
     item.classList.add('categories_wrapper_item');
     item.setAttribute('id', `${id}`);
@@ -196,7 +223,30 @@ function createGoods(photo, name, price, hit, id) {
                           <h4 class="categories_wrapper_price">${price}грн</h4>`;
         categoriesBody.append(item);
     }
-}
+    item.addEventListener('click', () => {
+        const id = item.getAttribute('id');
+        localStorage.setItem('cardProductId', id);
+        console.log(good);
+        addToViewedProducts(good);
+        window.location.href = 'cardProduct.html';
+      });
+};
+
+function addToViewedProducts(product) {
+    // console.log(product);
+    if(product) {
+        let viewedProducts = JSON.parse(localStorage.getItem('viewedProducts')) || [];
+        let productExists = viewedProducts.find(item => item._id === product._id);
+        if (!productExists) {
+            if (viewedProducts.length >= 10) {
+                viewedProducts.pop();
+            }
+            viewedProducts.unshift(product);
+            localStorage.setItem('viewedProducts', JSON.stringify(viewedProducts));
+            console.log('добавил');
+        }
+    }
+};
 
 function clearGoodsPage() {
     form.classList.remove('categories_filter_openFilterWindow');
@@ -235,9 +285,11 @@ document.addEventListener("DOMContentLoaded", () => {
                             category: categoryData
               },
               endUrl = `sortingMethod=${filterData.sortingMethod}&category=${filterData.category}&size=${filterData.size}&color=${filterData.color}&price=${JSON.stringify(filterData.price)}`;
+              localStorage.setItem('chooseColor', filterData.color[0]);
+              console.log(filterData.color[0]);
         clearAndCreateGoods()
             .then(() => {
-                loadingGoods(gettingGoods, endUrl, category, false)
+                loadingGoods(gettingGoods, endUrl, category, filterData.color, false)
                     .finally(() => {
                         setTimeout(() => {
                             document.querySelector('.loading').style.display = 'none';
@@ -265,16 +317,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 console.error('Error:', error);
             });
     });
-})
+});
 
 //пример товара
 // {
 // "_id": 130010,
-// "photo": "img/coats/wearing-long-gray-coat.jpg",
-// "name": "Кожаный тренч",
-// "price": 8400,
+// "photo": "img/coats/blackLongCoat0.jpg",
+// "photo2": "img/coats/blackLongCoat1.jpg",
+// "photo3": "img/coats/blackLongCoat2.jpg",
+// "photo4": "img/coats/blackLongCoat3.jpg",
+// "name": "Кашемировое пальто Red Amaizing",
+// "price": 4500,
 // "size": ["S","M", "XS"],
-// "colors": ["серый", "бежевый", "черный"],
+// "colors": ["серый", "черный"],
 // "category": "coats",
-// "date": "1693081256000"
+// "date": "1693081257200"
 // }

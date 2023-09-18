@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>  `;
 
     const menu = document.querySelector('.menu_dropDown'),
-          menuItem = document.querySelectorAll('.list_item'),
+          menuItem = menu.querySelectorAll('.list_item'),
           catalog = document.querySelector('.header_left_catalog'),
           mobileMenu = document.querySelector('.header_mobileMenu'),
           hamburger = document.querySelector('.header_mobileHamburger'),
@@ -70,10 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    //links in dropDown menu
     menuItem.forEach(item => {
-        item.addEventListener('click', openOrCloseCatalog);
+        item.addEventListener('click', event => {
+            event.preventDefault();
+            const category = event.target.dataset.category;
+            const categoryName = event.target.textContent;
+            localStorage.setItem('selectedCategory', category);
+            localStorage.setItem('selectedCategoryName', categoryName);
+            window.location.href = `categories.html`;
+            openOrCloseCatalog();
+        });
     });
-
     document.addEventListener('click', (e) => {
         const isClickInsideModal = menu.contains(e.target);
         // && e.target !== btnHamburger

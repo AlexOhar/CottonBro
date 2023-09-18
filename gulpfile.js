@@ -69,4 +69,6 @@ gulp.task('video', function () {
     .pipe(gulp.dest('dist/video'));
 });
 
+gulp.watch("src/js/**/*.js", gulp.parallel('scripts')).on('change', browserSync.reload);
+
 gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'mailer', 'html', 'images', 'video'));
