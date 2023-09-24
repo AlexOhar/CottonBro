@@ -47,11 +47,6 @@
         padding: 80px 50px
         h2
             font-size: 120px
-        // &_wrapp
-        //     &_item
-        //         height: 90vh
-        //         &_photo
-        //             height: 100%
     .footer
         &_pay
             img
@@ -73,6 +68,16 @@
                     padding-left: 0
             &_btns_reset
                 margin-top: 0
+    // page good
+    .good
+        width: 100vw
+        padding: 120px 50px
+        &_details
+            &_size_btns_item
+                width: 120px
+                height: 60px
+            &_info_btn
+                height: 80px
 
 @media (max-width: 1440px)
     .header
@@ -200,9 +205,6 @@
         h2
             font-size: 80px
             line-height: 140px
-        // &_wrapp
-        //     &_item
-        //         height: 80vh
     .footer
         span
             margin-top: 50px
@@ -254,6 +256,57 @@
                     width: 250px
             &_wrapp
                 width: 80%
+    // page good
+    .good
+        width: 100vw
+        padding: 100px 50px 0px 50px
+        &_slider
+            width: 54%
+        &_details
+            width: 46%
+            &_name
+                margin-top: 30px
+            &_price
+                margin-top: 10px
+            &_size
+                margin-top: 30px
+                &_btns
+                    margin-top: 20px
+                    &_item
+                        width: 110px
+                        height: 55px
+            &_color
+                margin-top: 35px
+                &_btns
+                    margin-top: 20px
+                    &_item
+                        width: 50px
+                        height: 50px
+            &_buttons
+                margin-top: 50px
+            &_info
+                margin-top: 60px
+                &_btn
+                    height: 80px
+    
+    //specialBlock
+    .specialBlock
+        padding: 100px 50px
+        h2
+            font-size: 130px
+        &_wrapp
+            &_photo
+                height: 80%
+            &_item
+                h5
+                    margin-top: 15px
+                h4
+                    margin-top: 12px
+    .specialBlock.specialBlock1
+        padding: 100px 50px 0 50px
+    .specialBlock.specialBlock2
+        padding: 100px 50px 50px 50px
+                
 @media (max-width: 1200px)
     .blockThree
         &_wrapp
@@ -336,9 +389,6 @@
         h2
             font-size: 80px
             line-height: 140px
-        // &_wrapp
-        //     &_item
-        //         height: 75vh
     .footer
         span
             margin-top: 50px
@@ -359,6 +409,103 @@
                 &_connect
                     a
                         margin-right: 0px
+    // page categories 
+    .categories
+        padding: 70px 50px
+        &_wrapper
+            row-gap: 40px
+            &_photo
+                height: 80%
+            &_descr_hit
+                font-size: 45px
+            &_name
+                margin-top: 15px
+            &_price
+                margin-top: 5px
+        &_header
+            font-size: 90px
+        &_filterBtn
+            margin-top: 40px
+        &_filter
+            h4
+                font-size: 42px
+            &_openFilterWindow
+                padding: 70px 20px
+                gap: 10px
+            &_container
+                font-size: 21px
+            &_prices
+                &_input
+                    margin-top: 0
+                &_btns
+                    margin-top: 70px
+                &_wrapp
+                    width: 100%
+
+    // page good
+    .good
+        width: 100vw
+        padding: 80px 50px 0px 50px
+        &_slider
+            width: 54%
+            &_screening
+                svg
+                    width: 20px
+                    height: 40px
+        &_details
+            width: 46%
+            &_name
+                margin-top: 20px
+                font-size: 28px
+            &_price
+                margin-top: 8px
+                font-size: 24px
+            &_size
+                margin-top: 30px
+                &_btns
+                    margin-top: 10px
+                    gap: 15px
+                    &_item
+                        width: 89px
+                        height: 44px
+                        font-size: 20px
+            &_color
+                margin-top: 30px
+                &_btns
+                    margin-top: 10px
+                    &_item
+                        width: 44px
+                        height: 44px
+            &_buttons
+                margin-top: 40px
+            &_info
+                margin-top: 50px
+                &_btn
+                    height: 70px
+                    h5
+                        font-size: 24px
+                    svg
+                        width: 24px
+                        height: 24px
+    
+    //specialBlock
+    .specialBlock
+        padding: 80px 50px
+        h2
+            font-size: 120px
+        &_wrapp
+            &_photo
+                height: 80%
+            &_item
+                h5
+                    margin-top: 15px
+                h4
+                    margin-top: 12px
+    .specialBlock.specialBlock1
+        padding: 80px 50px 0 50px
+    .specialBlock.specialBlock2
+        padding: 80px 50px 50px 50px
+
 @media (max-width: 991px)
     .firstScreen
         &_header
@@ -389,7 +536,6 @@
                     transform: translate(0%, 0%) scale(0.7)
     .subscribe
         &_wrapp_left
-            // padding-left: 40px
             h3
                 margin-top: 0%
                 font-size: 25px
@@ -436,6 +582,128 @@
                         img
                             width: 30px
                             height: 30px
+
+    // page categories 
+    .categories
+        padding: 70px 50px 0 50px
+        &_wrapper
+            gap: 15px
+            row-gap: 25px
+            &_photo
+                height: 70%
+            &_descr_hit
+                font-size: 36px
+            &_name
+                margin-top: 15px
+                font-size: 18px
+            &_price
+                margin-top: 5px
+                font-size: 20px
+        &_header
+            font-size: 80px
+        &_filterBtn
+            margin-top: 30px
+        &_filter
+            h4
+                font-size: 35px
+            &_container
+                font-size: 17px
+            &_prices
+                &_separator
+                    width: 80px
+                &_input
+                    &_field
+                        .span-prew
+                            margin-left: 5px
+                        input
+                            margin-left: 5px
+                        .span-next
+                            margin-right: 5px
+                &_btns
+                    margin-top: 60px
+                    &_reset
+                        height: 65px
+                        width: 250px
+                        margin-top: 0
+                        font-size: 18px
+                    &_result
+                        height: 65px
+                        width: 250px
+
+    // page good
+    .good
+        width: 100vw
+        padding: 70px 50px 0px 50px
+        &_slider
+            width: 54%
+            &_screening
+                svg
+                    width: 15px
+                    height: 30px
+        &_details
+            width: 46%
+            &_name
+                margin-top: 15px
+                font-size: 26px
+            &_price
+                margin-top: 5px
+                font-size: 22px
+            &_size
+                margin-top: 20px
+                &_header
+                    align-items: center
+                &_btns
+                    margin-top: 10px
+                    gap: 10px
+                    &_item
+                        width: 66px
+                        height: 33px
+                        font-size: 16px
+            &_color
+                margin-top: 20px
+                &_btns
+                    margin-top: 10px
+                    gap: 10px
+                    &_item
+                        width: 33px
+                        height: 33px
+            &_buttons
+                margin-top: 30px
+                height: 60px
+            &_info
+                margin-top: 40px
+                &_btn
+                    height: 60px
+                    padding-right: 20px
+                    h5
+                        font-size: 24px
+                    svg
+                        width: 24px
+                        height: 24px
+    
+    //specialBlock
+    .specialBlock
+        padding: 60px 50px
+        h2
+            font-size: 80px
+            line-height: 100px
+            padding-left: 50px
+        &_wrapp
+            &_photo
+                height: 70%
+            &_item
+                flex: 1 0 calc(25% - 10px)
+                max-width: calc(25% - 10px)
+                margin: 5px
+                h5
+                    margin-top: 15px
+                h4
+                    margin-top: 12px
+    .specialBlock.specialBlock1
+        padding: 60px 50px 0 50px
+    .specialBlock.specialBlock2
+        padding: 60px 50px 40px 50px
+
 @media (max-width: 767px)
     .header
         padding: 0 30px
@@ -500,6 +768,122 @@
                     line-height: 30px
                 button
                     margin-top: 50px
+
+    // page categories 
+    .categories
+        padding: 50px 20px 0 20px
+        &_wrapper
+            gap: 10px
+            row-gap: 15px
+            margin-top: 10px
+            &_item
+                max-height: 300px
+            &_photo
+                height: 75%
+            &_descr_hit
+                font-size: 30px
+            &_name
+                margin-top: 10px
+                font-size: 15px
+                margin-bottom: 0px
+            &_price
+                font-size: 17px
+                margin-bottom: 0px
+        &_header
+            font-size: 65px
+        &_filterBtn
+            margin-top: 20px
+            &_name
+                font-size: 20px
+                margin-bottom: 5px
+            &_icon
+                height: 12px
+        &_filter
+            &_openFilterWindow
+                display: flex
+                flex-direction: column
+                gap: 0
+                padding: 20px
+            &_sorting
+                width: 100%
+            &_colors
+                width: 100%
+            &_size
+                width: 100%
+            &_prices
+                width: 100%
+            h4
+                font-size: 35px
+                margin-bottom: 20px
+            &_container
+                font-size: 24px
+                padding-left: 25px
+            &_prices
+                &_separator
+                    width: 80px
+                &_input
+                    &_field
+                        .span-prew
+                            margin-left: 5px
+                        input
+                            margin-left: 5px
+                        .span-next
+                            margin-right: 5px
+                &_btns
+                    margin-top: 60px
+                    &_reset
+                        height: 65px
+                        width: 180px
+                        margin-top: 0
+                        font-size: 18px
+                    &_result
+                        height: 65px
+                        width: 180px
+
+    // page good
+    .good
+        width: 100vw
+        padding: 70px 50px 0px 50px
+        flex-direction: column
+        &_slider
+            width: 100%
+            &_preview
+                width: calc(30% - 10px)
+            &_screening
+                width: calc(70% - 10px)
+                svg
+                    width: 15px
+                    height: 30px
+        &_details
+            width: 100%
+            margin-top: 20px
+    
+    //specialBlock
+    .specialBlock
+        padding: 40px 50px
+        h2
+            font-size: 60px
+            line-height: 80px
+            padding-left: 30px
+        &_wrapp
+            &_photo
+                height: 60%
+            &_item
+                flex: 1 0 calc(25% - 10px)
+                max-width: calc(25% - 10px)
+                margin: 5px
+                h5
+                    margin: 0px
+                    margin-top: 10px
+                    font-size: 18px
+                h4
+                    margin: 0px
+                    margin-top: 8px
+                    font-size: 20px
+    .specialBlock.specialBlock1
+        padding: 40px 50px 0 50px
+    .specialBlock.specialBlock2
+        padding: 10px 50px 40px 50px
 
 @media (max-width: 575px)
     .header
@@ -750,7 +1134,6 @@
             padding-left: 0px
         &_wrapp
             flex-direction: column
-            // gap: 20px
             &_item
                 flex: 1 0 calc(100% - 20px)
                 max-width: calc(100% - 20px)
@@ -799,3 +1182,162 @@
                         img
                             width: 30px
                             height: 30px
+
+    // page categories 
+    .categories
+        padding: 50px 20px 0 20px
+        &_wrapper
+            display: flex
+            flex-direction: column
+            gap: 10px
+            row-gap: 15px
+            margin-top: 10px
+            &_item
+                max-height: none
+            &_photo
+                height: 75%
+            &_descr_hit
+                font-size: 30px
+            &_name
+                margin-top: 10px
+                font-size: 15px
+                margin-bottom: 0px
+            &_price
+                font-size: 17px
+                margin-bottom: 0px
+        &_header
+            font-size: 65px
+        &_filterBtn
+            margin-top: 20px
+            &_name
+                font-size: 20px
+                margin-bottom: 5px
+            &_icon
+                height: 12px
+        &_filter
+            display: flex
+            flex-direction: column
+            &_openFilterWindow
+                display: flex
+                flex-direction: column
+                gap: 0
+                padding: 20px
+            &_sorting
+                width: 100%
+            &_colors
+                width: 100%
+            &_size
+                width: 100%
+            &_prices
+                width: 100%
+            h4
+                font-size: 24px
+                margin-bottom: 20px
+            &_container
+                font-size: 20px
+                padding-left: 35px
+                margin-bottom: 10px
+            &_prices
+                &_separator
+                    width: 80px
+                &_input
+                    &_field
+                        .span-prew
+                            margin-left: 5px
+                        input
+                            margin-left: 5px
+                        .span-next
+                            margin-right: 5px
+                &_btns
+                    margin-top: 60px
+                    &_reset
+                        height: 65px
+                        width: 180px
+                        margin-top: 0
+                        font-size: 18px
+                    &_result
+                        height: 65px
+                        width: 180px
+
+    // page good
+    .good
+        width: 100vw
+        padding: 70px 20px 0px 20px
+        flex-direction: column
+        &_slider
+            width: 100%
+            &_preview
+                width: calc(30% - 10px)
+            &_screening
+                width: calc(70% - 10px)
+                svg
+                    width: 15px
+                    height: 30px
+        &_details
+            width: 100%
+            margin-top: 20px
+            &_name
+                margin-top: 15px
+                font-size: 26px
+            &_price
+                margin-top: 5px
+                font-size: 22px
+            &_size
+                margin-top: 20px
+                &_header
+                    align-items: center
+                &_btns
+                    margin-top: 10px
+                    gap: 10px
+                    &_item
+                        width: 66px
+                        height: 33px
+                        font-size: 16px
+            &_color
+                margin-top: 20px
+                &_btns
+                    margin-top: 10px
+                    gap: 10px
+                    &_item
+                        width: 33px
+                        height: 33px
+            &_buttons
+                margin-top: 30px
+                height: 60px
+            &_info
+                margin-top: 40px
+                &_btn
+                    height: 60px
+                    padding-right: 20px
+                    h5
+                        font-size: 24px
+                    svg
+                        width: 24px
+                        height: 24px
+    
+    //specialBlock
+    .specialBlock
+        padding: 40px 20px
+        h2
+            font-size: 60px
+            line-height: 80px
+            padding-left: 0px
+        &_wrapp
+            &_photo
+                height: 60%
+            &_item
+                flex: 1 0 100%
+                max-width: 100%
+                margin: 5px
+                h5
+                    margin: 0px
+                    margin-top: 10px
+                    font-size: 18px
+                h4
+                    margin: 0px
+                    margin-top: 8px
+                    font-size: 20px
+    .specialBlock.specialBlock1
+        padding: 40px 20px 0 20px
+    .specialBlock.specialBlock2
+        padding: 40px 20px 40px 20px
