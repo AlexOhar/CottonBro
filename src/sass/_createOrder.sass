@@ -1,0 +1,76 @@
+.order
+    position: relative
+    &_modal
+        position: fixed
+        top: 50vh
+        left: 50vw
+        translate: (-50% -50%)
+        width: 30%
+        height: 20%
+        background-color: #fff
+        border: 1px solid rgba(0, 0, 0, 0.50)
+        display: none
+        justify-content: center
+        align-items: center
+        h3
+            font-family: PT Sans Narrow
+            font-size: 30px
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+            // text-align: center
+    h5
+        color: #000
+        font-family: PT Sans Narrow
+        font-size: 24px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        margin-top: 80px
+        cursor: pointer
+        display: inline-block        
+
+    &_main
+        &_blockForm
+            display: flex
+            flex-direction: column
+            grid-column: 1/8
+            gap: 20px
+            border: 1px solid rgba(0, 0, 0, 0.50)
+            padding: 60px 30px
+            &_form
+                width: 100%
+                label
+                    margin-top: 20px
+                    color: #000
+                    font-family: PT Sans Narrow
+                    font-size: 30px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+                input
+                    margin-top: 15px
+                    width: 100%
+                    height: 84px
+                    border: 1px solid rgba(0, 0, 0, 0.50)
+                    padding: 0 20px
+
+                    color: #000
+                    font-family: PT Sans Narrow
+                    font-size: 30px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+                &_details
+                    display: grid
+                    gap: 30px
+                    grid-template-columns: repeat(6, 1fr)
+                    &_house
+                        grid-column: 1/2
+                    &_building
+                        grid-column: 2/4
+                    &_flat
+                        grid-column: 4/5
+            &_formSubmit
+                width: 30%
+                height: 80px

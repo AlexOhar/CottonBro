@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <a href="#"><img src="icons/account.png" alt="account"></a>
                 <!-- <a href="#"><img src="icons/search.png" alt="search"></a> -->
                 <a href="#"><img src="icons/favorites.png" alt="favorites"></a>
-                <a href="myBasket.html"><img src="icons/basket.png" alt="basket"></a>
+                <a href="myBasket.html"><span class="basketIcon_count"></span><img class="basketIcon" src="icons/basket.png" alt="basket"></a>
                 <div class="header_btn">
                     <span class="header_mobileHamburger"></span>
                 </div>
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <a href="#">Аккаунт</a>
                     <!-- <a href="#">Поиск</a> -->
                     <a href="#">Избранное</a>
-                    <a href="myBasket.html">Корзина</a>
+                    <a href="myBasket.html">Корзина<span id='counterInHamburger' class="basketIcon_count"></span></a>
                 </div>
             </div> `;
 
@@ -184,8 +184,8 @@ document.addEventListener("DOMContentLoaded", () => {
                             <li><a href="#">Способ оплаты</a></li>
                             <li><a href="#">Примерка и уход</a></li>
                             <li><a href="#">Возврат и обмен</a></li>
-                            <li><a href="#">Магазины</a></li>
-                            <li><a href="#">О Бренде</a></li>
+                            <li><a href="contacts.html">Магазины</a></li>
+                            <li><a href="aboutUs.html">О Бренде</a></li>
                             <li></li>
                         </ul>
                     </div>
@@ -205,4 +205,36 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </div>
                 </div>`;
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const basketIconCount = document.querySelectorAll('.basketIcon_count');
+    function checkBasketCounter() {
+        if (!localStorage.getItem('basketCounter') || localStorage.getItem('basketCounter') == '0') {
+            localStorage.setItem('basketCounter', "0");
+        } else {
+            basketIconCount.forEach(item => {
+                item.innerHTML = localStorage.getItem('basketCounter');
+                item.style.display = "block"; 
+            });
+            // basketIconCount.innerHTML = localStorage.getItem('basketCounter');
+            // basketIconCount.style.display = "block";
+        };
+        // console.log(localStorage.getItem('basketCounter'));
+    };
+    checkBasketCounter();
+    let observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+            basketIconCount.forEach(item => {
+                if (item.innerText !== "0") {
+                    item.style.display = "block";
+                } else if (item.innerText == "0") {
+                    item.style.display = "none";
+                }
+            });
+        });
+    });
+
+    let config = { childList: true, characterData: true, subtree: true };
+    observer.observe(basketIconCount[0], config);
 });

@@ -56,13 +56,13 @@ rangeInput.forEach(input =>{
         let minVal = parseInt(rangeInput[0].value),
         maxVal = parseInt(rangeInput[1].value);
 
-        if((maxVal - minVal) < priceGap){
-            if(e.target.className === "range-min"){
+        if ((maxVal - minVal) < priceGap){
+            if (e.target.className === "range-min"){
                 rangeInput[0].value = maxVal - priceGap
-            }else{
+            } else {
                 rangeInput[1].value = minVal + priceGap;
             }
-        }else{
+        } else {
             priceInput[0].value = minVal;
             priceInput[1].value = maxVal;
             range.style.left = ((minVal / rangeInput[0].max) * 100) + "%";
@@ -99,7 +99,7 @@ btnMoreColors.addEventListener('click', () => {
 
 // button more sizes in filter
 btnMoreSizes.addEventListener('click', () => {
-    if(btnMoreSizes.innerHTML === 'Еще') {
+    if (btnMoreSizes.innerHTML === 'Еще') {
         sizes.forEach((item) => {
             createElemForFilter(item, filterSizes, checkBoxSizes, "radio", "size");
         });

@@ -1,5 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const multer  = require('multer');
+const upload = multer();
 const app = express();
 const port = 3000;
 
@@ -90,14 +93,89 @@ app.get('/goods', async (req, res) => {
         return 0;
       }
     });
-
-    // console.log(`после сортировки методом ${sortingMethod}`, goods);
-    // Отправка отфильтрованных и отсортированных данных клиенту
+    
     res.json(goods);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Произошла ошибка при получении данных' });
   }
+});
+
+
+// Создание схемы и модели для коллекции Orders
+const ordersSchema = new mongoose.Schema({
+  _id: { type: String, default: () => new mongoose.Types.ObjectId().toHexString() },
+  name: String,
+  mail: String,
+  phone: String,
+  country: String,
+  city: String,
+  street: String,
+  houseNumber: String,
+  building: String,
+  apartment: String,
+  goods: Array,
+  totalPrice: Number,
+  date: { type: String, default: () => new Date().toISOString().slice(0,10) }
+});
+
+const Order = mongoose.model('Order', ordersSchema);
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.post('/order_form', upload.none(), async (req, res) => {
+    const orderData = {
+        name: req.body.name,
+        mail: req.body.mail,
+        phone: req.body.phone,
+        country: req.body.country,
+        city: req.body.city,
+        street: req.body.street,
+        houseNumber: req.body.houseNumber,
+        building: req.body.building,
+        apartment: req.body.apartment,
+        totalPrice: req.body.totalPrice
+    };
+
+    // Обработка дополнительных товаров
+    let goods = [];
+    let i = 0;
+    while (req.body['good' + i]) {
+        goods.push(req.body['good' + i]);
+        i++;
+    }
+    orderData.goods = goods;
+
+    console.log(orderData.name);
+
+    const order = new Order(orderData);
+    try {
+        await order.save();
+        res.send(JSON.stringify("Форма успешно обработана!"));
+    } catch (err) {
+        console.log(err);
+        res.status(500).send('Ошибка при сохранении данных.');
+    }
+});
+
+app.use(express.json());
+
+app.post('/promo', (req, res) => {
+    const promoCode = req.body.promoCode;
+    let response;
+
+    switch(promoCode) {
+        case 'MOLY':
+            response = { code: 'MOLY', discount: '12%' };
+            break;
+        case 'Friendly24':
+            response = { code: 'Friendly24', discount: '20%' };
+            break;
+        default:
+            response = { message: 'Промокод не действителен!' };
+    }
+
+    res.json(response);
 });
 
 // Запуск сервера

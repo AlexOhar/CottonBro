@@ -78,6 +78,113 @@
                 height: 60px
             &_info_btn
                 height: 80px
+    // page basket
+    .basket
+        padding: 80px 50px
+        input[type='text']
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            border-radius: 0
+        &_header
+            font-size: 120px
+            margin-top: 60px
+        h5
+            margin-top: 50px
+        &_main_goods_item_info_price
+            margin-top: 100px
+
+    // page create Order
+    .order
+        h5
+            margin-top: 50px
+        input[type='text'], input[type='phone'], input[type='password']
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            border-radius: 0
+        &_main
+            &_blockForm
+                padding: 50px 30px
+                label
+                    margin-top: 15px
+                    font-size: 26px
+                input
+                    height: 70px
+                    margin-top: 10px
+                    font-size: 26px
+
+    //page payment
+    .payment
+        h5
+            margin-top: 50px
+        input[type='text'], input[type='phone'], input[type='password']
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            border-radius: 0
+        &_main
+            &_form
+                padding: 50px 30px
+                &_method
+                    &_options
+                        height: 90px
+                        img
+                            height: 100%
+                            width: auto
+                        input
+                            height: 40px
+                            width: 40px
+                &_btn
+                    margin-top: 50px
+            &_cardData
+                margin-top: 30px
+
+    .aboutUs
+        &_blockInfo
+            padding: 50px 0
+            p
+                font-size: 26px
+        &_blockPhoto
+            padding: 60px 0
+        &_lastPhoto
+            padding: 60px 0
+
+    .contacts
+        input[type='text'], input[type='phone'], input[type='password']
+            -webkit-appearance: none
+            -moz-appearance: none
+            appearance: none
+            border-radius: 0
+        .contacts_info h4, .contacts_shops h4
+            font-size: 35px
+            margin-top: 0
+            
+        .contacts_info h5, .contacts_shops h5
+            font-size: 22px
+            margin-top: 0
+        .contacts_info h6
+            font-size: 18px
+            margin-top: 0
+        &_info
+            margin-top: 70px
+            gap: 50px
+            &_information
+                gap: 50px
+            &_form
+                padding: 45px 30px 80px 30px
+                h4
+                    margin-bottom: 30px
+                input
+                    height: 70px
+                    margin-bottom: 30px
+                &_btn
+                    height: 70px
+        &_shops
+            margin-top: 110px
+            padding: 70px 0
+              
+
 
 @media (max-width: 1440px)
     .header
@@ -293,7 +400,7 @@
     .specialBlock
         padding: 100px 50px
         h2
-            font-size: 130px
+            font-size: 100px
         &_wrapp
             &_photo
                 height: 80%
@@ -306,7 +413,129 @@
         padding: 100px 50px 0 50px
     .specialBlock.specialBlock2
         padding: 100px 50px 50px 50px
-                
+
+    // page basket
+    .basket
+        padding: 80px 50px
+        &_header
+            font-size: 100px
+            margin-top: 30px
+        h5
+            margin-top: 30px
+        &_main
+            gap: 15px
+            &_goods
+                gap: 15px
+                &_item
+                    &_cross
+                        height: 20px
+                        width: 20px
+                        right: 20px
+                        top: 20px
+                    &_info
+                        padding: 20px 20px 20px 0
+                        h4
+                            font-size: 25px
+                        h3
+                            font-size: 30px
+                        &_name
+                            margin-top: 20px
+                        &_price
+                            margin-top: 80px
+                            &_amount
+                                height: 55px
+                                width: 160px
+                                h4
+                                    margin-bottom: 0
+            &_info
+                &_card
+                    padding: 20px
+                    h2
+                        font-size: 60px
+                    h3
+                        font-size: 25px
+                    &_formPromo
+                        margin-top: 40px
+                        input
+                            line-height: 80px
+                    &_btnCreateOrder
+                        margin-top: 50px
+
+    // page create Order
+    .order
+        &_main
+            &_blockForm
+                padding: 30px 20px
+                label
+                    margin-top: 12px
+                    font-size: 22px
+                input
+                    height: 55px
+                    margin-top: 8px
+                    font-size: 22px
+                &_form
+                    &_details
+                        gap: 20px
+                &_formSubmit
+                    margin-top: 40px
+                    height: 60px
+
+    //page payment
+    .payment
+        h3
+            font-size: 25px
+        h5
+            margin-top: 30px
+        &_main
+            &_form
+                padding: 40px 20px
+                &_method
+                    &_options
+                        height: 70px
+                        img
+                            height: 100%
+                            width: auto
+                        input
+                            height: 30px
+                            width: 30px
+                &_btn
+                    margin-top: 40px
+            &_cardData
+                margin-top: 20px
+                label
+                    font-size: 25px
+                input
+                    height: 70px
+                    font-size: 25px
+                    padding-left: 15px
+
+    .aboutUs
+        padding: 80px 50px 0 50px
+        &_blockInfo
+            padding: 50px 0
+            p
+                font-size: 23px
+        &_blockPhoto
+            padding: 50px 0
+        &_lastPhoto
+            padding: 50px 0
+
+    .contacts
+        &_info
+            margin-top: 60px
+            gap: 40px
+            &_information
+                gap: 40px
+            &_form
+                input
+                    height: 70px
+                    margin-bottom: 20px
+                &_btn
+                    height: 60px
+        &_shops
+            margin-top: 100px
+            padding: 60px 0
+
 @media (max-width: 1200px)
     .blockThree
         &_wrapp
@@ -492,7 +721,7 @@
     .specialBlock
         padding: 80px 50px
         h2
-            font-size: 120px
+            font-size: 90px
         &_wrapp
             &_photo
                 height: 80%
@@ -505,6 +734,161 @@
         padding: 80px 50px 0 50px
     .specialBlock.specialBlock2
         padding: 80px 50px 50px 50px
+    
+    // page basket
+    .basket
+        padding: 70px 50px
+        &_header
+            font-size: 90px
+            margin-top: 20px
+        h5
+            margin-top: 20px
+        &_main
+            margin-top: 15px
+            &_goods
+                &_item
+                    &_cross
+                        height: 15px
+                        width: 15px
+                        right: 15px
+                        top: 15px
+                    &_info
+                        padding: 15px 15px 15px 0
+                        h4
+                            font-size: 20px
+                        h3
+                            font-size: 25px
+                        &_name
+                            margin-top: 15px
+                        &_price
+                            margin-top: 55px
+                            &_amount
+                                height: 45px
+                                width: 135px
+                                h4
+                                    margin-bottom: 0
+                                span
+                                    &::before
+                                        height: 15px
+                                &_blockMin
+                                    width: 15px
+                                    height: 15px
+                                &_blockPlus
+                                    width: 15px
+                                    height: 15px
+            &_info
+                &_card
+                    padding: 20px
+                    h2
+                        font-size: 50px
+                    h3
+                        font-size: 20px
+                    &_formPromo
+                        margin-top: 30px
+                        input
+                            line-height: 65px
+                            font-size: 20px
+                    &_total
+                        margin-top: 25px
+                    &_btnCreateOrder
+                        margin-top: 40px
+
+    // page create Order
+    .order
+        &_main
+            &_blockForm
+                padding: 30px 20px
+                label
+                    margin-top: 10px
+                    font-size: 20px
+                input
+                    height: 45px
+                    margin-top: 5px
+                    font-size: 20px
+                    padding: 0 10px
+                &_form
+                    &_details
+                        gap: 20px
+                &_formSubmit
+                    margin-top: 30px
+                    height: 50px
+
+    //page payment
+    .payment
+        h3
+            font-size: 20px
+        h5
+            margin-top: 20px
+        &_main
+            &_form
+                padding: 30px 20px
+                gap: 10px
+                &_method
+                    gap: 20px
+                    &_options
+                        height: 65px
+                        img
+                            height: 100%
+                            width: auto
+                        input
+                            height: 25px
+                            width: 25px
+                &_btn
+                    margin-top: 30px
+            &_cardData
+                margin-top: 10px
+                label
+                    font-size: 20px
+                    margin-bottom: 10px
+                input
+                    height: 65px
+                    font-size: 20px
+                    padding-left: 10px
+
+    .aboutUs
+        padding: 70px 50px 0 50px
+        &_blockInfo
+            padding: 45px 0
+            p
+                font-size: 18px
+        &_blockPhoto
+            padding: 45px 0
+        &_lastPhoto
+            padding: 45px 0
+
+    .contacts
+        .contacts_info h4, .contacts_shops h4
+            font-size: 30px
+            margin-top: 0
+            
+        .contacts_info h5, .contacts_shops h5
+            font-size: 20px
+            margin-top: 0
+        .contacts_info h6
+            font-size: 16px
+            margin-top: 0
+        &_info
+            margin-top: 50px
+            gap: 30px
+            &_information
+                gap: 30px
+                &_mails
+                    &_commercial
+                        margin-top: 20px
+                    &_creative
+                        margin-top: 20px
+            &_form
+                padding: 30px 20px 60px 20px
+                h4
+                    margin-bottom: 30px
+                input
+                    height: 60px
+                    margin-bottom: 20px
+                &_btn
+                    height: 70px
+        &_shops
+            margin-top: 90px
+            padding: 50px 0
 
 @media (max-width: 991px)
     .firstScreen
@@ -704,6 +1088,186 @@
     .specialBlock.specialBlock2
         padding: 60px 50px 40px 50px
 
+    // page basket
+    .basket
+        padding: 70px 50px 0 50px
+        &_header
+            font-size: 80px
+            margin-top: 10px
+        h5
+            margin-top: 10px
+            font-size: 16px
+        &_main
+            margin-top: 10px
+            gap: 10px
+            &_goods
+                gap: 10px
+                &_item
+                    &_cross
+                        height: 15px
+                        width: 15px
+                        right: 10px
+                        top: 10px
+                    &_info
+                        padding: 10px 10px 10px 0
+                        h4
+                            font-size: 18px
+                        h3
+                            font-size: 22px
+                        &_name
+                            margin-top: 15px
+                        &_price
+                            margin-top: 30px
+                            &_amount
+                                height: 40px
+                                width: 115px
+                                h4
+                                    margin-bottom: 0
+                                span
+                                    &::before
+                                        height: 15px
+                                &_blockMin
+                                    width: 15px
+                                    height: 15px
+                                &_blockPlus
+                                    width: 15px
+                                    height: 15px
+                        &_param
+                            margin-top: 8px
+            &_info
+                &_card
+                    padding: 10px
+                    h2
+                        font-size: 40px
+                        line-height: 30px
+                    h3
+                        font-size: 18px
+                    &_quantityGoods
+                        margin-top: 10px
+                    &_coast
+                        margin-top: 10px
+                    &_formPromo
+                        margin-top: 15px
+                        input
+                            line-height: 50px
+                            font-size: 18px
+                            margin-top: 8px
+                    &_total
+                        margin-top: 20px
+                    &_btnCreateOrder
+                        margin-top: 30px
+                        height: 60px
+                        font-size: 16px
+
+    // page create Order
+    .order
+        &_main
+            &_blockForm
+                padding: 20px 10px
+                label
+                    margin-top: 10px
+                    font-size: 18px
+                input
+                    height: 40px
+                    margin-top: 5px
+                    font-size: 18px
+                    padding: 0 5px
+                &_form
+                    &_details
+                        gap: 10px
+                        &_building
+                            input
+                                font-size: 16px
+                &_formSubmit
+                    margin-top: 20px
+                    height: 50px
+
+    //page payment
+    .payment
+        h3
+            font-size: 16px
+        h5
+            margin-top: 10px
+            font-size: 16px
+        &_main
+            &_form
+                padding: 20px 10px
+                gap: 10px
+                &_method
+                    gap: 10px
+                    &_options
+                        height: 55px
+                        padding-left: 10px
+                        gap: 10px
+                        img
+                            height: 100%
+                            width: auto
+                        input
+                            height: 25px
+                            width: 25px
+                &_btn
+                    margin-top: 20px
+                    height: 55px
+                    font-size: 16px
+                    width: 100%
+            &_cardData
+                margin-top: 10px
+                label
+                    font-size: 16px
+                    margin-top: 10px
+                    margin-bottom: 5px
+                input
+                    height: 50px
+                    font-size: 16px
+                    padding-left: 10px
+
+    .aboutUs
+        padding: 70px 50px 0 50px
+        &_blockInfo
+            padding: 35px 0
+            p
+                font-size: 20px
+                margin-bottom: 0
+        &_blockPhoto
+            padding: 35px 0
+        &_lastPhoto
+            padding: 35px 0
+
+    .contacts
+        .contacts_info h4, .contacts_shops h4
+            font-size: 24px
+            margin-top: 0
+            
+        .contacts_info h5, .contacts_shops h5
+            font-size: 18px
+            margin-top: 0
+        .contacts_info h6
+            font-size: 14px
+            margin-top: 0
+        &_info
+            margin-top: 40px
+            gap: 20px
+            &_information
+                gap: 20px
+                &_mails
+                    &_commercial
+                        margin-top: 15px
+                    &_creative
+                        margin-top: 15px
+            &_form
+                padding: 30px 20px 60px 20px
+                h4
+                    margin-bottom: 20px
+                input
+                    height: 50px
+                    margin-bottom: 20px
+                    font-size: 20px
+                &_btn
+                    height: 60px
+        &_shops
+            margin-top: 90px
+            padding: 50px 0
+
 @media (max-width: 767px)
     .header
         padding: 0 30px
@@ -718,6 +1282,13 @@
             width: 130px
             a
                 padding: 0px
+                .basketIcon_count
+                    font-size: 8px
+                    line-height: 10px
+                    top: 5px
+                    right: 12px
+                    width: 10px
+                    height: 10px
                 img
                     transform: scale(.5)
     .button
@@ -884,6 +1455,201 @@
         padding: 40px 50px 0 50px
     .specialBlock.specialBlock2
         padding: 10px 50px 40px 50px
+    
+    // page basket
+    .basket
+        padding: 50px 20px 0 20px
+        &_header
+            font-size: 65px
+            margin-top: 10px
+        h5
+            margin-top: 0px
+            font-size: 14px
+        &_main
+            margin-top: 5px
+            gap: 10px
+            &_goods
+                gap: 10px
+                &_item
+                    &_cross
+                        height: 10px
+                        width: 10px
+                        right: 10px
+                        top: 10px
+                    &_info
+                        padding: 10px 10px 10px 0
+                        h4
+                            font-size: 16px
+                            line-height: 16px
+                        h3
+                            font-size: 18px
+                            margin-bottom: 0
+                        &_name
+                            margin-top: 10px
+                        &_price
+                            margin-top: 30px
+                            &_amount
+                                height: 32px
+                                width: 100px
+                                h4
+                                    margin-bottom: 0
+                                span
+                                    &::before
+                                        height: 10px
+                                &_blockMin
+                                    width: 10px
+                                    height: 10px
+                                &_blockPlus
+                                    width: 10px
+                                    height: 10px
+                        &_param
+                            margin-top: 8px
+            &_info
+                &_card
+                    padding: 10px
+                    h2
+                        font-size: 33px
+                        line-height: 22px
+                    h3
+                        font-size: 16px
+                    &_quantityGoods
+                        margin-top: 15px
+                    &_coast
+                        margin-top: 5px
+                    &_formPromo
+                        margin-top: 10px
+                        input
+                            line-height: 45px
+                            font-size: 16px
+                            margin-top: 5px
+                    &_total
+                        margin-top: 15px
+                    &_btnCreateOrder
+                        margin-top: 20px
+                        height: 50px
+                        font-size: 14px
+
+    // page create Order
+    .order
+        &_main
+            &_blockForm
+                padding: 0px 10px 15px 10px
+                label
+                    margin-top: 15px
+                    font-size: 18px
+                input
+                    height: 40px
+                    margin-top: 5px
+                    font-size: 18px
+                    padding: 0 10px
+                &_form
+                    &_details
+                        column-gap: 10px
+                        row-gap: 0px
+                        &_house
+                            grid-column: 1/4
+                        &_building
+                            grid-column: 4/7
+                            input
+                                font-size: 14px
+                        &_flat
+                            grid-column: 1/7
+                &_formSubmit
+                    margin-top: 20px
+                    height: 50px
+
+    //page payment
+    .payment
+        h3
+            font-size: 14px
+        h5
+            margin-top: 0px
+            font-size: 14px
+        &_main
+            &_form
+                padding: 20px 10px
+                gap: 5px
+                &_method
+                    gap: 10px
+                    &_options
+                        height: 40px
+                        padding-left: 10px
+                        gap: 10px
+                        img
+                            height: 100%
+                            width: auto
+                        input
+                            height: 15px
+                            width: 15px
+                &_btn
+                    margin-top: 20px
+                    height: 55px
+                    font-size: 16px
+                    width: 100%
+            &_cardData
+                margin-top: 0px
+                label
+                    font-size: 16px
+                    margin-top: 15px
+                    margin-bottom: 5px
+                input
+                    height: 40px
+                    font-size: 16px
+                    padding-left: 10px
+                &_cardDetail
+                    &_mmyy
+                        width: 100%
+                    &_cvv
+                        width: 100%
+
+    .aboutUs
+        padding: 50px 20px 0 20px
+        &_blockInfo
+            padding: 25px 0
+            p
+                font-size: 18px
+        &_blockPhoto
+            padding: 25px 0
+        &_lastPhoto
+            padding: 25px 0
+
+    .contacts
+        .contacts_info h4, .contacts_shops h4
+            font-size: 24px
+            margin-top: 0
+            
+        .contacts_info h5, .contacts_shops h5
+            font-size: 18px
+            margin-top: 0
+        .contacts_info h6
+            font-size: 14px
+            margin-top: 0
+        &_info
+            margin-top: 40px
+            gap: 40px
+            display: flex
+            flex-direction: column
+            &_information
+                gap: 20px
+                &_mails
+                    &_commercial
+                        margin-top: 15px
+                    &_creative
+                        margin-top: 15px
+            &_form
+                padding: 30px 20px 60px 20px
+                h4
+                    margin-bottom: 20px
+                input
+                    height: 50px
+                    margin-bottom: 20px
+                    font-size: 20px
+                &_btn
+                    height: 60px
+        &_shops
+            margin-top: 80px
+            padding: 50px 0
+            grid-template-columns: 1fr
 
 @media (max-width: 575px)
     .header
@@ -901,6 +1667,7 @@
             img
                 height: 30px
         &_right
+            position: relative
             width: 80px
             height: 30px
             a
@@ -967,12 +1734,21 @@
             z-index: -5
             transition: .3s all ease-out
             a
+                position: relative
                 display: flex
                 font-weight: 400
                 line-height: 24px
                 font-size: 16px
                 color: #000000
                 text-decoration-line: none
+                span.basketIcon_count 
+                    display: block
+                    top: 0px
+                    right: 45px
+                    font-size: 10px
+                    line-height: 15px
+                    width: 15px
+                    height: 15px
     .menu_dropDown
         &_active
             width: 250px
@@ -1264,37 +2040,50 @@
         width: 100vw
         padding: 70px 20px 0px 20px
         flex-direction: column
+        gap: 10px
         &_slider
             width: 100%
+            gap: 10px
             &_preview
-                width: calc(30% - 10px)
+                width: calc(30% - 5px)
+                gap: 10px
             &_screening
-                width: calc(70% - 10px)
+                width: calc(70% - 5px)
                 svg
-                    width: 15px
-                    height: 30px
+                    width: 7px
+                    height: 14px
         &_details
             width: 100%
-            margin-top: 20px
+            margin-top: 0px
+            &_navigation
+                display: none
             &_name
-                margin-top: 15px
-                font-size: 26px
-            &_price
-                margin-top: 5px
+                font-family: PT Sans Narrow
+                margin-top: 0px
                 font-size: 22px
+            &_price
+                font-family: PT Sans Narrow
+                margin-top: 10px
+                font-size: 30px
             &_size
-                margin-top: 20px
+                margin-top: 40px
                 &_header
                     align-items: center
+                    h5
+                        font-size: 18px
+                    h6
+                        font-size: 16px
                 &_btns
                     margin-top: 10px
-                    gap: 10px
+                    gap: 6px
                     &_item
-                        width: 66px
-                        height: 33px
-                        font-size: 16px
+                        width: 78px
+                        height: 41px
+                        font-size: 20px
             &_color
-                margin-top: 20px
+                h5
+                    font-size: 18px
+                    margin-top: 20px
                 &_btns
                     margin-top: 10px
                     gap: 10px
@@ -1303,26 +2092,42 @@
                         height: 33px
             &_buttons
                 margin-top: 30px
-                height: 60px
+                height: 56px
             &_info
+                font-family: PT Sans Narrow
                 margin-top: 40px
+                font-size: 22px
+                h6
+                    font-size: 22px
+                li
+                    font-size: 22px
                 &_btn
                     height: 60px
                     padding-right: 20px
                     h5
-                        font-size: 24px
+                        font-size: 22px
                     svg
-                        width: 24px
-                        height: 24px
+                        width: 22px
+                        height: 22px
+    .good_details_info .info.open
+        font-family: PT Sans Narrow
+        padding-bottom: 20px
+        font-size: 22px
+        li
+            font-size: 22px
+        h6
+            font-size: 22px
     
     //specialBlock
     .specialBlock
         padding: 40px 20px
         h2
-            font-size: 60px
+            font-size: 50px
             line-height: 80px
             padding-left: 0px
+            text-align: left
         &_wrapp
+            gap: 20px
             &_photo
                 height: 60%
             &_item
@@ -1336,8 +2141,232 @@
                 h4
                     margin: 0px
                     margin-top: 8px
-                    font-size: 20px
+                    font-size: 22px
     .specialBlock.specialBlock1
         padding: 40px 20px 0 20px
     .specialBlock.specialBlock2
         padding: 40px 20px 40px 20px
+
+    // page basket
+    .basket
+        padding: 40px 20px 0 20px
+        &_header
+            font-size: 60px
+            margin-top: 10px
+        h5
+            margin-top: 0px
+            font-size: 14px
+        &_main
+            margin-top: 5px
+            gap: 10px
+            display: flex
+            flex-direction: column
+            &_goods
+                gap: 10px
+                &_item
+                    flex-direction: column
+                    gap: 0px
+                    img
+                        width: 100%
+                    &_cross
+                        height: 10px
+                        width: 10px
+                        right: 10px
+                        top: 10px
+                    &_info
+                        padding: 10px 10px 10px 0
+                        h4
+                            font-size: 16px
+                            line-height: 16px
+                            padding-left: 10px
+                        h3
+                            font-size: 18px
+                            margin-bottom: 0
+                            padding-left: 10px
+                        &_name
+                            margin-top: 0px
+                        &_price
+                            margin-top: 20px
+                            width: 100%
+                            justify-content: space-between
+                            &_amount
+                                height: 32px
+                                width: 100px
+                                h4
+                                    margin-bottom: 0
+                                span
+                                    &::before
+                                        height: 10px
+                                &_blockMin
+                                    width: 10px
+                                    height: 10px
+                                &_blockPlus
+                                    width: 10px
+                                    height: 10px
+                        &_param
+                            margin-top: 8px
+            &_info
+                &_card
+                    padding: 10px
+                    h2
+                        font-size: 33px
+                        line-height: 22px
+                    h3
+                        font-size: 16px
+                    &_quantityGoods
+                        margin-top: 15px
+                    &_coast
+                        margin-top: 5px
+                    &_formPromo
+                        margin-top: 10px
+                        input
+                            line-height: 45px
+                            font-size: 16px
+                            margin-top: 5px
+                    &_total
+                        margin-top: 15px
+                    &_btnCreateOrder
+                        margin-top: 20px
+                        height: 50px
+                        font-size: 14px
+
+    // page create Order
+    .order
+        &_main
+            gap: 20px
+            &_blockForm
+                padding: 0px 10px 15px 10px
+                label
+                    margin-top: 15px
+                    font-size: 22px
+                input
+                    height: 40px
+                    margin-top: 5px
+                    font-size: 18px
+                    padding: 0 10px
+                &_form
+                    &_details
+                        column-gap: 20px
+                        row-gap: 0px
+                        &_house
+                            grid-column: 1/4
+                        &_building
+                            grid-column: 4/7
+                            input
+                                font-size: 18px
+                        &_flat
+                            grid-column: 1/7
+                &_formSubmit
+                    margin-top: 20px
+                    height: 56px
+                    width: 100%
+
+    //page payment
+    .payment
+        h3
+            font-size: 22px
+        h5
+            margin-top: 0px
+            font-size: 18px
+        &_main
+            flex-direction: column-reverse
+            &_form
+                padding: 20px 10px
+                gap: 5px
+                &_method
+                    gap: 10px
+                    &_options
+                        height: 40px
+                        padding-left: 10px
+                        gap: 10px
+                        img
+                            height: 100%
+                            width: auto
+                        input
+                            height: 15px
+                            width: 15px
+                &_btn
+                    margin-top: 20px
+                    height: 55px
+                    font-size: 14px
+                    width: 100%
+            &_cardData
+                margin-top: 0px
+                label
+                    font-size: 22px
+                    margin-top: 15px
+                    margin-bottom: 5px
+                input
+                    height: 40px
+                    font-size: 22px
+                    padding-left: 10px
+                &_cardDetail
+                    margin-top: 15px
+                    &_mmyy
+                        width: 100%
+                    &_cvv
+                        width: 100%
+
+    .aboutUs
+        padding: 40px 20px 0 20px
+        overflow-y: hidden
+        &_blockInfo
+            padding: 30px 0
+            p
+                font-size: 19px
+        &_blockPhoto
+            display: grid
+            column-gap: 20px
+            row-gap: 0px
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: 1fr 1fr 1fr
+            padding: 40px 0
+            .firstPhoto
+                grid-column: 1/2
+                grid-row: 3/4
+            .secondPhoto
+                grid-column: 1/3
+                grid-row: 1/3
+                object-fit: cover
+            .thirdPhoto
+                grid-column: 2/3
+                grid-row: 3/4
+        &_lastPhoto
+            padding: 40px 0
+            width: 150%
+            transform: translateX(-25%)
+    
+    .contacts
+        &_header
+            text-align: start
+        .contacts_info h4, .contacts_shops h4
+            font-size: 20px
+        .contacts_info h5, .contacts_shops h5
+            font-size: 18px
+        .contacts_info h6
+            font-size: 14px
+        &_info
+            margin-top: 40px
+            gap: 20px
+            
+            &_information
+                gap: 20px
+                
+            &_form
+                padding: 15px 10px
+                h4
+                    margin-bottom: 5px
+                input
+                    height: 40px
+                    margin-bottom: 15px
+                    font-size: 14px
+                &_btn
+                    height: 55px
+        &_shops
+            margin-top: 40px
+            padding: 20px 0
+            grid-template-columns: 1fr
+        &_blockMap
+            gap: 20px
+            grid-template-rows: repeat(2, 1fr)
+            grid-template-columns: 1fr

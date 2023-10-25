@@ -1,0 +1,239 @@
+.good
+    padding: 180px 50px 0px 50px
+    display: flex
+    gap: 20px
+    position: relative
+    &_slider
+        display: flex
+        gap: 20px
+        width: 58%
+        height: 100%
+        &_preview
+            display: flex
+            flex-direction: column
+            width: calc( 27% - 10px )
+            height: 100%
+            gap: 20px
+            img
+                aspect-ratio: 1 / 1
+                width: 100%
+                object-fit: cover
+                object-position: top
+                cursor: pointer
+        &_screening
+            position: relative
+            width: calc( 73% - 10px )
+            height: 100%
+            img
+                aspect-ratio: 3 / 5
+                width: 100%
+                object-fit: cover
+                object-position: top
+            &_leftBtn, &_rightBtn
+                position: absolute
+                height: 100%
+                width: 25%
+                top: 0
+                display: flex
+                align-items: center
+                justify-content: center
+                cursor: pointer
+            &_leftBtn
+                left: 0
+            &_rightBtn
+                right: 0
+        h6
+            color: #818181
+            font-family: PT Sans Narrow
+            font-size: 20px
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+    &_details
+        position: relative
+        width: 42%
+        height: 100%
+        border-block-end: 1px solid #000
+        &_modalAddProd
+            display: none
+            position: absolute
+            width: 50%
+            z-index: 10
+            background-color: #fff
+            border: solid 1px #000
+            top: 50vh
+            left: 50%
+            translate: -50% -50%
+            h3
+                color: #000
+                font-family: PT Sans Narrow
+                font-style: normal
+                font-weight: 400
+                line-height: normal
+                font-size: 30px
+                line-height: 200%
+                text-align: center
+                align-items: center
+        h6
+            cursor: pointer
+        &_navigation
+            display: flex
+            gap: 15px
+        &_name
+            margin-top: 38px
+        &_price
+            margin-top: 14px
+        &_size
+            margin-top: 43px
+            &_header
+                display: flex
+                justify-content: space-between
+                h6
+                    text-decoration: underline #818181
+            &_btns
+                display: flex
+                flex-wrap: wrap
+                gap: 20px
+                margin-top: 23px
+                &_item
+                    border: 1px solid #000
+                    width: 134px
+                    height: 64px
+                    flex-shrink: 0
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    cursor: pointer
+                    
+                    color: #000
+                    font-family: PT Sans Narrow
+                    font-size: 24px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+                .choosed
+                    background-color: #000
+                    color: #fff
+        &_color
+            margin-top: 50px
+            &_header
+                display: flex
+                justify-content: space-between
+                h6
+                    text-decoration: underline #818181
+            &_btns
+                display: flex
+                gap: 20px
+                margin-top: 23px
+                &_item
+                    width: 56px
+                    height: 56px
+                    flex-shrink: 0
+                    cursor: pointer
+                // &_item, .black
+                //     background: #000
+                // &_item, .red
+                //     background: #F00
+                .active
+                    border: 1px solid #000
+                    &::after
+                        content: ''
+                        display: block
+                        width: 100%
+                        height: 100%
+                        background: #ffffff00
+                        border: 5px solid #ffffff
+        &_buttons
+            display: flex
+            height: 80px
+            gap: 20px
+            margin-top: 70px
+            &_basket
+                margin-top: 0
+                width: 100%
+                height: 100%
+            &_favorite
+                width: 84px
+                height: 100%
+                border: 1px solid #000
+                background-color: #fff
+        &_info
+            display: flex
+            flex-direction: column
+            margin-top: 76px
+            &_btn
+                cursor: pointer
+                display: flex
+                justify-content: space-between
+                align-items: center
+                padding-right: 50px
+                // border-block-end: 1px solid #000
+                border-block-start: 1px solid #000
+                height: 95px
+                h5
+                    font-size: 30px
+            .info 
+                max-height: 0
+                overflow: hidden
+                transition: max-height 0.2s ease-out
+                line-height: 142.4%
+                h6
+                    font-size: 24px
+                    color: #818181
+                    font-family: PT Sans Narrow
+                    font-size: 24px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+            .info, li
+                font-family: PT Sans Narrow
+                font-size: 30px
+                font-style: normal
+                font-weight: 400
+                line-height: 137.4%  
+            .info.open 
+                max-height: 750px
+                padding-bottom: 50px
+            .deleteGorizontLine
+                display: none
+.modalChooseSize
+    display: none
+    padding: 40px 40px 60px 80px
+    position: absolute
+    margin: 0 auto
+    width: 80vw
+    background-color: #fff
+    z-index: 99
+    color: #000
+    font-family: PT Sans Narrow
+    font-size: 24px
+    font-style: normal
+    font-weight: 400
+    line-height: 160%
+    transform: translate(-50%, -50%)
+    top: 50vh
+    left: 50vw
+    &_crossBlock
+        width: 100%
+        &_cross
+            float: right
+            width: 25px
+            height: 25px
+            flex-shrink: 0
+            cursor: pointer
+    h4
+        margin-top: 70px
+        color: #000
+        font-family: PT Sans Narrow
+        font-size: 24px
+        font-style: normal
+        font-weight: 400
+        line-height: 160%
+        // text-transform: uppercase
+    li
+        color: #000
+        font-family: PT Sans Narrow
+.specialBlock
+    padding: 160px 50px 0 50px
+.specialBlock.specialBlock2
+    padding: 160px 50px
