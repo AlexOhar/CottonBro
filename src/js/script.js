@@ -1,99 +1,3 @@
-// window.addEventListener('DOMContentLoaded', () => {
-//     const menu = document.querySelector('.menu_dropDown'),
-//           menuItem = document.querySelectorAll('.list_item'),
-//           catalog = document.querySelector('.header_left_catalog'),
-//           mobileMenu = document.querySelector('.header_mobileMenu'),
-//           hamburger = document.querySelector('.header_mobileHamburger'),
-//           btnHamburger = document.querySelector('.header_btn'),
-//           mobileLinks = document.querySelectorAll('.header_mobileMenu a'),
-//           body = document.body;
-
-//     //преходы на страницы
-
-//     catalog.addEventListener('click', () => {
-//         openOrCloseCatalog();
-//         if(mobileMenu.classList.contains('mobile_active')) {
-//             mobileMenu.classList.remove('mobile_active');
-//             hamburger.classList.remove('hamburger_active');
-//             // offScrolling();
-//         }
-//     });
-
-//     menuItem.forEach(item => {
-//         item.addEventListener('click', openOrCloseCatalog);
-//     });
-
-//     document.addEventListener('click', (e) => {
-//         const isClickInsideModal = menu.contains(e.target);
-//         // && e.target !== btnHamburger
-//         if (!isClickInsideModal && e.target !== catalog) {
-//             menu.classList.remove('menu_dropDown_active');
-//             onScrolling();
-//         }
-//     });
-
-//     document.addEventListener('click', (e) => {
-//         const isClickInsideModalMob = mobileMenu.contains(e.target);
-        
-//         if (!isClickInsideModalMob && e.target !== btnHamburger && e.target !== catalog) {
-//             mobileMenu.classList.remove('mobile_active');
-//             hamburger.classList.remove('hamburger_active');
-//             onScrolling();
-//         }
-//     });
-   
-    
-//     btnHamburger.addEventListener('click', (e) => {
-//         if(!mobileMenu.classList.contains('mobile_active')) {
-//             mobileMenu.classList.add('mobile_active');
-//             hamburger.classList.add('hamburger_active');
-//             offScrolling();
-//         } else {
-//             mobileMenu.classList.remove('mobile_active');
-//             hamburger.classList.remove('hamburger_active');
-//             onScrolling();
-//         }
-//     });
-    
-//     mobileLinks.forEach(item => {
-//         item.addEventListener('click', () => {
-//             mobileMenu.classList.remove('mobile_active');
-//             hamburger.classList.remove('hamburger_active');
-//             onScrolling();
-//         });
-//     });
-
-//     function openOrCloseCatalog() {
-//         if(!menu.classList.contains('menu_dropDown_active')) {
-//             menu.classList.add('menu_dropDown_active');
-//             offScrolling();
-//         } else {
-//             menu.classList.remove('menu_dropDown_active');
-//             onScrolling();
-//         }
-//     }
-
-//     function offScrolling() {
-//         let pagePosition = window.scrollY;
-//         body.style.overflow = 'hidden';
-//         body.style.height = '100vh';
-//         body.style.position = 'fixed';
-//         body.style.left = '0';
-//         body.style.width = '100%';
-//         body.dataset.position = pagePosition;
-//         body.style.top = `-${pagePosition}px`;
-//     }
-    
-//     function onScrolling() {
-//         let pagePosition = parseInt(body.dataset.position, 10);
-//         // console.log(pagePosition);
-//         body.style.top = 'auto';
-//         body.style = '';
-//         window.scrollBy(pagePosition, 0);
-//         body.removeAttribute('data-position');
-//     }
-
-// });
     
 //Scroll season cadrs
 const firstLine = document.querySelector(".season_wrapp_firstLine"),
@@ -235,6 +139,18 @@ window.addEventListener("DOMContentLoaded", async () => {
     });
     const categoryForYou = localStorage.getItem('selectedCategory');
     await createSpecialBlock('Для Тебя', 0, categoryForYou);
+    const autumnBtn = document.getElementById('autumnBtn');
+    const newCollectionBtn = document.getElementById('newCollectionBtn');
+    autumnBtn.addEventListener('click', () => {
+        localStorage.setItem('selectedCategory', 'jackets');
+        localStorage.setItem('selectedCategoryName', 'Куртки');
+        window.location.href = `categories.html`;
+    });
+    newCollectionBtn.addEventListener('click', () => {
+        localStorage.setItem('selectedCategory', 'newCollection');
+        localStorage.setItem('selectedCategoryName', 'New collection');
+        window.location.href = `categories.html`;
+    });
 });
 
 

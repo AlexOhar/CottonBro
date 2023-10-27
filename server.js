@@ -7,7 +7,7 @@ const app = express();
 const port = 3000;
 
 // Подключение к базе данных MongoDB
-const connectionString = 'mongodb+srv://alexfrontend:(password)@cluster0.twr4vmt.mongodb.net/cottonbro?retryWrites=true&w=majority';
+const connectionString = 'mongodb+srv://alexfrontend:AlA5E4eSVoWUV3Ki@cluster0.twr4vmt.mongodb.net/cottonbro?retryWrites=true&w=majority';
 mongoose.connect(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true

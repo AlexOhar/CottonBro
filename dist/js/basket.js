@@ -175,6 +175,10 @@ function changesIntoBasket(item, act, side) {
             localStorage.setItem('basketCounter', 0);
         } else {
             localStorage.setItem('basketCounter', newQuantity);
+            const basketCounters = document.querySelectorAll('.basketIcon_count');
+            basketCounters.forEach(icon => {
+                icon.innerHTML = `${newQuantity}`;
+            });
         }
         item.remove();
         const newArrBasket = arrBasket.filter(obj => {
@@ -220,6 +224,10 @@ function changesIntoBasket(item, act, side) {
         const newAmount = Number(amount.slice(0,-3));
         localStorage.setItem('basketCounter', newAmount);
         basketCounter.innerHTML = `${newAmount}`;
+        const basketCounters = document.querySelectorAll('.basketIcon_count');
+        basketCounters.forEach(icon => {
+            icon.innerHTML = `${newAmount}`;
+        });
     };
 };
 

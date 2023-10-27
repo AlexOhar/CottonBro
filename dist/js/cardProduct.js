@@ -205,6 +205,10 @@ function addToBasket() {
         setTimeout(function() {
             goodAdd.innerHTML = 'Добавить в корзину';
         }, 2000);
+        const basketCounters = document.querySelectorAll('.basketIcon_count');
+        basketCounters.forEach(icon => {
+            icon.innerHTML = `${quantity}`;
+        });
     });
 }
 

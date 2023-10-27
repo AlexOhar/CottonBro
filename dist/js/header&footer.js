@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="header_btn">
                     <span class="header_mobileHamburger"></span>
                 </div>
+                <span id='counterOnHamburger' class="basketIcon_count"></span>
                 <div class="header_mobileMenu">
                     <a href="#">Аккаунт</a>
                     <!-- <a href="#">Поиск</a> -->
@@ -102,13 +103,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
     btnHamburger.addEventListener('click', (e) => {
+        const counterBask = document.getElementById('counterOnHamburger');
         if(!mobileMenu.classList.contains('mobile_active')) {
             mobileMenu.classList.add('mobile_active');
             hamburger.classList.add('hamburger_active');
+            counterBask.style.display = 'none';
+
             offScrolling();
         } else {
             mobileMenu.classList.remove('mobile_active');
             hamburger.classList.remove('hamburger_active');
+            if (counterBask.innerHTML !== '0' && counterBask.innerHTML !== '') {
+                counterBask.style.display = 'block';
+            }
             onScrolling();
         }
     });
